@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  .div-img-principal img{
+    width: 100%;
+    height: 89.5vh;
+  }
+  
+  .div-img-principal div{
+    position: absolute;
+    top: 100px;
+    right: 150px;
+  }
+  
+  .div-mensaje-principal{
+    border: 5px solid red;
+    border-radius: 10px;
+    background-color: grey;
+  }
+  
+  .div-mensaje-principal2{
+    position: absolute;
+    border: 5px solid yellow;
+    background-color: green;
+    bottom: 0px;
+  }
+
+  .PaddingFacebook {
+   padding-bottom: 10px;
+   padding-top: 10px;
+  }
+  
+  
+  
+  
+  @media(max-width: 500px){
+    .div-img-principal img{
+      height: 55vh;
+    }
+  
+    .div-mensaje-principal{
+      display: none;
+    }
+  }
+  
+  @media(min-width: 500px){
+    .div-mensaje-principal2{
+      display: none;
+    }
+  }
+  
+  
+  
