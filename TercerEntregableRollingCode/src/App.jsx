@@ -1,8 +1,8 @@
-import { useState } from 'react'
 
 import './App.css'
-import {BrowserRouter as Router}from 'react-router-dom'
-import RoutesView from '../routes/RoutesView'
+import { BrowserRouter as Router } from 'react-router-dom'
+import RoutesView from './routes/RoutesView'
+
 
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-     <Router>
+    <Router>
       <RoutesView/>
-     </Router>
+    </Router>
     </>
   )
 }
