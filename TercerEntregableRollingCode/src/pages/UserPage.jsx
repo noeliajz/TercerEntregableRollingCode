@@ -1,9 +1,14 @@
 import React from 'react'
+import CardProduct from '../components/CardProduct'
 
 const UserPage = () => {
   return (
     <>
-    <h1>PAGINA DEL USUARIO</h1>
+    <div className="conteiner">
+      <div className="row">
+        <CardProduct/>
+      </div>
+    </div>
     </>
   )
 }
