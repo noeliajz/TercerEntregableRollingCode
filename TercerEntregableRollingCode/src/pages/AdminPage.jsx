@@ -30,7 +30,7 @@ const AdminPage = () => {
               justify
             >
               <Tab eventKey="turnos" title="TURNOS">
-                <TabDailyDoc1 />
+               
                 <TabDailyDoc2 />
               </Tab>
             </Tabs>

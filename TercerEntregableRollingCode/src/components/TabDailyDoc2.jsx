@@ -1,11 +1,21 @@
 import React from 'react'
 import Table from 'react-bootstrap/esm/Table'
+import { arrayUsers } from '../data/usurarios'
+import { Link } from 'react-router-dom'
 
 const TabDailyDoc2 = () => {
+
+  const getProduct = async (id) => {
+    location.href= `/product/${id}`
+
+  }
+
   return (
+  
+  <> 
     <div>TabDailyDoc2</div>
-   /*
-      <> 
+   
+      
       
       <Table striped bordered hover>
       <thead>
@@ -24,7 +34,7 @@ const TabDailyDoc2 = () => {
               <td>{usuario.nombre_usuario} {usuario.apellido}</td>
               <td>{usuario.nombre_mascota}</td>
               <td>{usuario.especie}</td>
-              <td> <button className='btn btn-primary' onClick={() => deleteProduct(usuario._id)}>LEGAJO</button> </td>
+              <td> <Link to={`/record/${usuario.id}`} className="btn btn-primary" onClick={() => getProduct(id) }>LEGAJO</Link> </td>
             </tr>
   
           )
@@ -34,7 +44,7 @@ const TabDailyDoc2 = () => {
     </Table>
    
       </>
-       */
+       
   )
 }
 

@@ -1,6 +1,8 @@
 import React from 'react'
 import { arrayUsers } from '../data/usurarios'
 import Table from 'react-bootstrap/esm/Table'
+import { Link } from 'react-router-dom'
+import { Button } from 'bootstrap/dist/js/bootstrap.bundle'
 
 const TabDailyDoc1 = () => {
   return (
@@ -21,7 +23,7 @@ const TabDailyDoc1 = () => {
             <td>{usuario.nombre_usuario} {usuario.apellido}</td>
             <td>{usuario.nombre_mascota}</td>
             <td>{usuario.especie}</td>
-            <td> <button className='btn btn-primary' onClick={() => deleteProduct(usuario._id)}>LEGAJO</button> </td>
+            <td> <button><Link to={`/record/${user.id}`} className="btn btn-primary" onClick={() => getProduct(id) }>LEGAJO</Link></button>   </td>
           </tr>
 
         )
