@@ -1,23 +1,23 @@
 export const arrayProductos = [
     {
       id:1,
-      nombre: 'Gaseosa',
+      nombre: 'Rocku 4kg',
       precio: '600',
-      img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/798/865/products/107875589-794760bfcf6292ab2416639366988275-640-0.webp',
+      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIq-amAK2hyio2LLPDVVdweOm02CfszDz98A&usqp=CAU',
       alt:'gaseosa coca cola'
     },
     {
       id:2,
-      nombre: 'Fiambre',
+      nombre: 'Pedigree 8kg',
       precio: '1000',
-      img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/839/products/project_20200929_2300036-011-2a622ef1b31e85d50316014317029579-1024-1024.png',
+      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNIiC454nu848KhGcTUbQgyAh4iPn_Sv6iZw&usqp=CAU',
       alt:'Fiambre paladini'
     },
     {
       id:3,
-      nombre: 'Jabon Para la Ropa',
+      nombre: 'SMUG 10 kg',
       precio: '1500',
-      img:'https://www.ala.com.ar/images/h0nadbhvm6m4/2ORBeta8lZnekWHe0lwdoY/7580ab7e1d5856525a627aee1771754c/SmFib19uX0xpX3F1aWRvX0FsYV9wYXJhX0RpbHVpcl9FY29sYXZhZG8ucG5n/1080w-1080h/jab%C3%B3n-l%C3%ADquido-para-diluir-paquete.jpg',
+      img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6XSonWFETWD7qPqQ1bq7jB6RV33bHVXiDMw&usqp=CAU',
       alt:'Jabon Ala'
     }
   ]
