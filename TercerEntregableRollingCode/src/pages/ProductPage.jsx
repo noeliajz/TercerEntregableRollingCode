@@ -17,7 +17,7 @@ const ProductPage = () => {
 
     useEffect(() => {
       getProduct()
-      console.log('hola')
+      
     }, [])
     
   }

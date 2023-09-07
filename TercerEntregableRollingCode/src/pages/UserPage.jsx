@@ -4,7 +4,7 @@ import CardProduct from '../components/CardProduct'
 
 const UserPage = () => {
 
-  const [products, setProducts] = useState([])
+ /* const [products, setProducts] = useState([])
 
   const getAllProducts = async () => {
     const res = await fetch(arrayProductos)
@@ -14,8 +14,8 @@ const UserPage = () => {
     useEffect(() => {
       getAllProducts()
     }, [])
-    console.log('hola')
-  }
+    
+  }*/
   return (
     <>
     <h1>PAGINA DEL USUARIO</h1>
