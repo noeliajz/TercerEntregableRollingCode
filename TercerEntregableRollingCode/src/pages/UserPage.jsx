@@ -3,7 +3,7 @@ import { arrayProductos } from '../data/product'
 import CardProduct from '../components/CardProduct'
 
 const UserPage = () => {
-  
+
 
   const [products, setProducts] = useState([])
 

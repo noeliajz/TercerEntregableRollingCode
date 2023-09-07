@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Routes, Route} from 'react-router-dom'
 import AdminPage from '../pages/AdminPage'
-import UserPage from '../pages/userPage'
+import UserPage from '../pages/UserPage'
 import Home from '../pages/Home'
 import ProductPage from '../pages/ProductPage'
 
