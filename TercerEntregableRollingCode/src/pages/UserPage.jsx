@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { arrayProductos } from '../data/product'
+import CardProduct from '../components/CardProduct'
 
 const UserPage = () => {
 
@@ -13,11 +14,14 @@ const UserPage = () => {
     useEffect(() => {
       getAllProducts()
     }, [])
-  
+    console.log('hola')
   }
   return (
     <>
     <h1>PAGINA DEL USUARIO</h1>
+    <div>
+      <CardProduct/>
+    </div>
     </>
   )
 }
