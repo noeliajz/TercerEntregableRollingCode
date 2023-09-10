@@ -9,8 +9,7 @@ import Col from 'react-bootstrap/Col';
 const Footer = () => {
   return (
     <>
-      
-         <Container fluid className=' bg-dark text-center py-4 footer' >
+         <Container fluid className=' bg-dark text-center py-4 ' >
             <Row className='justify-content-between py-3'>
                 <Link to="/" alt="" >
                   <img src="./img/icono.jpeg" alt="" width="190px" height="190px"/>
