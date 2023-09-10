@@ -6,6 +6,7 @@ import RecordPage from '../pages/RecordPage'
 import PlanDescription from '../pages/PlanDescription'
 import ShopingCart from '../pages/ShopingCart'
 import Turn from '../pages/Turn'
+
 import {Routes, Route} from 'react-router-dom'
 
 const RoutesView = () => {

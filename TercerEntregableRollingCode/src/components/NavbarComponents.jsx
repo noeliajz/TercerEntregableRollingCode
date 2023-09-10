@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const NavbarComponents = () => {
   return (
-    <Navbar expand="lg" fixed="top" className="bg-body-tertiary">
+    <Navbar expand="lg" fixed="top" className="navbar"  >
     <Container>
       <Navbar.Brand href="#home">
             <img
@@ -26,6 +26,7 @@ const NavbarComponents = () => {
           <Nav.Link href="#home">Inicio</Nav.Link>
           <Nav.Link href="#link">Sobre nosotros</Nav.Link>
           <Nav.Link href="/planDesc">Nuestros planes</Nav.Link>
+          <Nav.Link href="/turn">Turnos</Nav.Link> 
         </Nav>
       </Navbar.Collapse>
       <Nav className="ms-auto">

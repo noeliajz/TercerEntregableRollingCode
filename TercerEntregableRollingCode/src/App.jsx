@@ -5,10 +5,12 @@ import NavbarComponents from './components/NavbarComponents'
 import Footer from './components/Footer'
 
 function App() {
+  const [userAdmin, setUserAdmin] = useState(false)
+
   return (
     <>
     <Router>
-      <NavbarComponents/>
+      <NavbarComponents userAdmin={userAdmin} setUserAdmin={setUserAdmin}/>
       <RoutesView/>
       <Footer/>
     </Router>

@@ -5,49 +5,56 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
 
 const PlanDescription = () => {
+  const estiloTextoCard = {
+    color:'red'
+  }
+
   return (
     <>
-      <h2 className='py-5 '>Conoce todos nuestros a planes</h2>
-     <Container className='prueba' >
-      <Row className='d-flex py-3 justify-content-center'>
-        <Col className='d-flex' sm={12} md={6} lg={12}>
-            <Card className="bg-dark text-white m-4  " >
-            <Card.Img src="https://www.foyel.com/archivos/8/0/1971_cachorros_jugando_2_web.jpg" alt="Card image"  />
+      <h2 className='paddingTitle text-center'>Conoce todos nuestros a planes</h2>
+     <Container fluid className='color' >
+      <Row className=' py-3 justify-content-between'>
+        <Col className='d-flex' sm={3} lg={4} >
+            <Card className=" m-4">
+              <Card.Img src="https://media.lmneuquen.com/p/7c3155642d13e2c356d31604a8b8c296/adjuntos/195/imagenes/002/377/0002377931/motivos-y-soluciones-las-mascotas-que-prefieren-callar.jpg" alt="Card image"  height={'300px'} width={'300px'}/>
+              <Card.ImgOverlay>
+                <Card.Title className='text-center fs-4' style={{color:'#D2DE32'}}>"Plan: Primeros pasos"</Card.Title>
+                <Card.Text style={estiloTextoCard}>
+                Es un servicio para mascotas de 0 a 5 años. 
+                </Card.Text>
+                <Card.Text style={estiloTextoCard}>Incluye: guardia 24 hs y 20% de descuento en alimentos</Card.Text>
+                <Card.Text style={estiloTextoCard}>No incluye internación</Card.Text>
+              </Card.ImgOverlay>
+            </Card>
+        </Col>
+        <Col className='d-flex' sm={3} lg={4} >
+            <Card className=" m-4">
+              <Card.Img src="https://w0.peakpx.com/wallpaper/565/820/HD-wallpaper-beagle-lawn-puppy-green-grass-bokeh-pets-dogs-cute-animals-beagle-in-grass-beagle-dog.jpg" alt="Card image" height={'300px'} width={'300px'} />
+              <Card.ImgOverlay>
+                <Card.Title className='text-center fs-4' style={{color:'#D2DE32'}}>"Plan: Madurando"</Card.Title>
+                <Card.Text  style={estiloTextoCard}>
+                Es un servicio para mascotas de 5 a 10 años. 
+                </Card.Text>
+                <Card.Text style={estiloTextoCard}>Incluye: guardia 24 hs y 25% de descuento en alimentos</Card.Text>
+                <Card.Text style={estiloTextoCard}>No incluye internación</Card.Text>
+              </Card.ImgOverlay>
+            </Card>
+        </Col>
+        <Col className='d-flex' sm={3} lg={4} >
+          <Card className=" m-4">
+            <Card.Img src="https://e1.pxfuel.com/desktop-wallpaper/721/496/desktop-wallpaper-pets.jpg" alt="Card image" height={'300px'} width={'300px'}/>
             <Card.ImgOverlay>
-              <Card.Title>"Plan: Primeros pasos"</Card.Title>
-              <Card.Text>
-              Es un servicio para mascotas de 0 a 5 años. 
-              </Card.Text>
-              <Card.Text>Incluye: guardia 24 hs y 20% de descuento en alimentos</Card.Text>
-              <Card.Text>No incluye internación</Card.Text>
-            </Card.ImgOverlay>
-          </Card>
-          
-          <Card className="bg-dark text-white m-4">
-            <Card.Img src="https://ojo.pe/resizer/pPxA2I5bpLp4P4i5aSzT8HumGGI=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/I2QQGNC745EGDF3WYJI6ASWJDY.png" alt="Card image" />
-            <Card.ImgOverlay>
-              <Card.Title>"Plan: Madurando"</Card.Title>
-              <Card.Text>
-              Es un servicio para mascotas de 5 a 10 años. 
-              </Card.Text>
-              <Card.Text>Incluye: guardia 24 hs y 25% de descuento en alimentos</Card.Text>
-              <Card.Text>No incluye internación</Card.Text>
-            </Card.ImgOverlay>
-          </Card>
-          <Card className="bg-dark text-white m-4">
-            <Card.Img src="https://i1.wp.com/tuplanetavital.org/wp-content/uploads/2015/10/5perros-ancianos-fotos.jpg" alt="Card image" />
-            <Card.ImgOverlay>
-              <Card.Title>"Plan: Adultos"</Card.Title>
-              <Card.Text>
+              <Card.Title className='text-center fs-4' style={{color:'#D2DE32'}}>"Plan: Adultos"</Card.Title>
+              <Card.Text style={estiloTextoCard}>
               Es un servicio para mascotas de más de 10 años.. 
               </Card.Text>
-              <Card.Text>Incluye: guardia 24 hs y 20% de descuento en alimentos</Card.Text>
-              <Card.Text>No incluye internación</Card.Text>
+              <Card.Text style={estiloTextoCard}>Incluye: guardia 24 hs y 20% de descuento en alimentos</Card.Text>
+              <Card.Text style={estiloTextoCard}>No incluye internación</Card.Text>
             </Card.ImgOverlay>
           </Card>
-        </Col>
+        </Col>        
       </Row>
-    
+
      </Container>
     </>
   )

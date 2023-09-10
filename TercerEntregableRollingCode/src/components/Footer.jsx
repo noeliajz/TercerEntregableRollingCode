@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 const Footer = () => {
   return (
     <>
-         <Container fluid className=' bg-dark text-center py-4 ' >
+         <Container fluid className=' footer text-center py-4 ' >
             <Row className='justify-content-between py-3'>
                 <Link to="/" alt="" >
                   <img src="./img/icono.jpeg" alt="" width="190px" height="190px"/>
@@ -17,37 +17,36 @@ const Footer = () => {
             </Row>
             <Row className='justify-content-between '>
                 <Col sm={3} lg={3}  >
-                    <Link to="error404.html" >Información</Link>
+                    <Link to="error404.html" className='fs-4 footer'>Información</Link>
                     <div className='py-3'>
                       <div className='py-2'>
-                      <Link to="error404.html">Preguntas frecuentas</Link>
+                      <Link to="error404.html" className='fs-5 footer'>Preguntas frecuentas</Link>
                       </div>
                       <div className='py-2'>
-                      <Link to="error404.html">Términos y condiciones</Link>
+                      <Link to="error404.html" className='fs-5 footer'>Términos y condiciones</Link>
                       </div>
                       <div className='py-2'>
-                      <Link to="error404.html">Botón de arrepentimiento</Link>
+                      <Link to="error404.html" className='fs-5 footer'>Botón de arrepentimiento</Link>
                       </div>
                       <div className='py-2'>
-                      <Link to="error404.html">Legales de promoción</Link>
+                      <Link to="error404.html" className='fs-5 footer'>Legales de promoción</Link>
                       </div>
                     </div>  
                 </Col>
                 <Col sm={3} lg={3} >
-                  <Link to="error404.html" >¡Seguinos!</Link>  
+                  <Link to="error404.html" className='fs-4 footer'>¡Seguinos!</Link>  
                     <div className='py-3'>
-                      <Link to="error404.html">@KingPet</Link>  
+                      <Link to="error404.html" className='fs-5 footer'>@KingPet</Link>  
                     </div>
                 </Col>
                 <Col sm={3} lg={3} >
-                    <Link to="error404.html">Contacto</Link>  
+                    <Link to="error404.html" className='fs-4 footer'>Contacto</Link>  
                 </Col>
                 <Col sm={3}  lg={3} >
-                    <Link to="https://goo.gl/maps/KCtNriVoH4WxpcAEA">Ubicación</Link>
+                    <Link to="https://goo.gl/maps/KCtNriVoH4WxpcAEA" className='fs-4 footer'>Ubicación</Link>
                 </Col>
             </Row>
         </Container> 
-         
     </>
   )
 }
