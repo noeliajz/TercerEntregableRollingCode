@@ -3,6 +3,10 @@ import AdminPage from '../pages/AdminPage'
 import Home from '../pages/Home'
 import ProductPage from '../pages/ProductPage'
 import RecordPage from '../pages/RecordPage'
+import PlanDescription from '../pages/PlanDescription'
+import ShopingCart from '../pages/ShopingCart'
+import Turn from '../pages/Turn'
+
 
 
 import {Routes, Route} from 'react-router-dom'
