@@ -1,18 +1,16 @@
-import './App.css'
 import React, { useState } from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 import { BrowserRouter as Router } from 'react-router-dom'
 import RoutesView from './routes/RoutesView'
-
+import NavbarComponents from './components/NavbarComponents'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
     <Router>
-      <Navbar />
-      <Footer />
+      <NavbarComponents/>
       <RoutesView/>
+      <Footer/>
     </Router>
     </>
   )
