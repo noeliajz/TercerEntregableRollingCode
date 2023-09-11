@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CardProduct from '../components/CardProduct'
 
-const UserPage = () => {
+const UserPage = ({ setUserAdmin }) => {
+  useEffect(() => {
+    setUserAdmin(true)
+  }, [])
   return (
     <>
     <CardProduct/>

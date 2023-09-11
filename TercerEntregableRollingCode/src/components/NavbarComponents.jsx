@@ -5,7 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from 'react-router-dom';
 
-const NavbarComponents = () => {
+const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
+  const logoutUserFunction = () => {
+    setUserAdmin(false)
+  }
   return (
     <Navbar expand="lg" fixed="top" className="navbar"  >
     <Container>
@@ -30,8 +33,17 @@ const NavbarComponents = () => {
         </Nav>
       </Navbar.Collapse>
       <Nav className="ms-auto">
-          <Nav.Link href="/register">Registrarse</Nav.Link>
-          <Nav.Link href="/login">Iniciar sesión</Nav.Link>
+        {
+          !userAdmin ?
+          <>
+            <Nav.Link href="/register">Registrarse</Nav.Link>
+            <Nav.Link href="/login">Iniciar sesión</Nav.Link>
+          </>
+          :
+          <Nav.Link href="/login" onClick={() => logoutUserFunction()}>Cerrar sesión</Nav.Link>
+        
+        }
+          
           </Nav>
     </Container>
   </Navbar>

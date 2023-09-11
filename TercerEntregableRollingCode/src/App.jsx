@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
-import RoutesView from './routes/RoutesView'
 import NavbarComponents from './components/NavbarComponents'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Footer from './components/Footer'
+import RoutesView from './routes/RoutesView'
 
-function App() {
+const App = () => {
   const [userAdmin, setUserAdmin] = useState(false)
 
   return (
     <>
     <Router>
       <NavbarComponents userAdmin={userAdmin} setUserAdmin={setUserAdmin}/>
-      <RoutesView/>
+      <RoutesView setUserAdmin={setUserAdmin}/>
       <Footer/>
     </Router>
     </>
@@ -19,3 +19,4 @@ function App() {
 }
 
 export default App
+

@@ -6,10 +6,10 @@ import RecordPage from '../pages/RecordPage'
 import PlanDescription from '../pages/PlanDescription'
 import ShopingCart from '../pages/ShopingCart'
 import Turn from '../pages/Turn'
-
+import UserPage from '../pages/UserPage'
 import {Routes, Route} from 'react-router-dom'
 
-const RoutesView = () => {
+const RoutesView = ({setUserAdmin}) => {
   return (
     <Routes>
         <Route path='/' element={<Home/>} />
@@ -19,7 +19,8 @@ const RoutesView = () => {
         <Route  path='/shopingCart' element={<ShopingCart/>}/>
         <Route  path='/planDesc' element={<PlanDescription/>}/>
         <Route  path='/turn' element={<Turn/>}/>
-
+        <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
+        
     </Routes>
   )
 }
