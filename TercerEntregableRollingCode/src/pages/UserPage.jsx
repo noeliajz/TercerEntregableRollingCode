@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CardProduct from '../components/CardProduct'
 import CarrouselPublicity from '../components/CarrouselPublicity'
 
-const UserPage = () => {
+const UserPage = ({ setUserAdmin }) => {
+  useEffect(() => {
+    setUserAdmin(true)
+  }, [])
   return (
     <>
     <div className="conteiner">
