@@ -4,10 +4,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from 'react-router-dom';
+import './css/NavbarComponents.css';
+
 
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
   const logoutUserFunction = () => {
     setUserAdmin(false)
+    location.href='/'
   }
   return (
     <Navbar expand="lg" fixed="top" className="navbar"  >
@@ -26,21 +29,21 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#home">Inicio</Nav.Link>
-          <Nav.Link href="#link">Sobre nosotros</Nav.Link>
-          <Nav.Link href="/planDesc">Nuestros planes</Nav.Link>
-          <Nav.Link href="/turn">Turnos</Nav.Link> 
+          <NavLink to="#home" className='text-white letra' >Inicio</NavLink>
+          <NavLink to="#link">Sobre nosotros</NavLink>
+          <NavLink to="/planDesc">Nuestros planes</NavLink>
+          <NavLink to="/turn">Turnos1</NavLink> 
         </Nav>
       </Navbar.Collapse>
       <Nav className="ms-auto">
         {
           !userAdmin ?
           <>
-            <Nav.Link href="/register">Registrarse</Nav.Link>
-            <Nav.Link href="/login">Iniciar sesión</Nav.Link>
+            <NavLink to="/register">Registrarse</NavLink>
+            <NavLink to="/login">Iniciar sesión</NavLink>
           </>
           :
-          <Nav.Link href="/login" onClick={() => logoutUserFunction()}>Cerrar sesión</Nav.Link>
+          <NavLink to="/login" onClick={() => logoutUserFunction()}>Cerrar sesión</NavLink>
         
         }
           
