@@ -9,6 +9,7 @@ import Turn from '../pages/Turn'
 import UserPage from '../pages/UserPage'
 import {Routes, Route} from 'react-router-dom'
 
+
 const RoutesView = ({setUserAdmin}) => {
   return (
     <Routes>
@@ -21,6 +22,7 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/turn' element={<Turn/>}/>
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
         
+
     </Routes>
   )
 }
