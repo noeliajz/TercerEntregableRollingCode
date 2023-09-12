@@ -32,7 +32,7 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
           <NavLink to="#home" className='text-white letra' >Inicio</NavLink>
           <NavLink to="#link">Sobre nosotros</NavLink>
           <NavLink to="/planDesc">Nuestros planes</NavLink>
-          <NavLink to="/turn">Turnos1</NavLink> 
+          <NavLink to="/turn">Solicitar turnos</NavLink> 
         </Nav>
       </Navbar.Collapse>
       <Nav className="ms-auto">
