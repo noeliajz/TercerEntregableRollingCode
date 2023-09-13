@@ -2,9 +2,9 @@ import React from 'react'
 import michis from '../img/michis.png'
 import { FiArrowRight } from 'react-icons/fi';
 import App from '../../App';
-import Carrusel from './Carrusel';
 
-const Home = () => {
+
+const Homex = () => {
   return (
     <>
    <div className="contenedor-princi">
@@ -41,4 +41,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Homex
