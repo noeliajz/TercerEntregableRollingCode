@@ -44,3 +44,102 @@
 }
  
  */
+
+ #carouselExampleIndicators {
+  text-align: center; 
+}
+
+.textomarcas {
+  font-size: 24px;
+  margin: 20px 0; 
+}
+
+.imagen-profesio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+
+.profesional {
+  text-align: center;
+  flex: 1; 
+  max-width: 400px; 
+}
+
+.profesional img {
+  width: 100%; 
+  max-height: 400px; 
+  height: auto; 
+}
+
+
+.nombres {
+  font-size: 18px;
+  margin-top: 10px; 
+}
+
+.about-section-text-container {
+  text-align: center; 
+  padding: 20px;
+}
+
+.primary-heading {
+  font-size: 24px;
+  margin: 20px 0; 
+}
+
+.work-section-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px;
+  text-align: left; 
+}
+
+
+.testimonial-section-bottom {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
+
+
+.testimonial-section-bottom img {
+  width: 200px; 
+  height: auto; 
+}
+
+
+h2 {
+  font-size: 18px;
+  margin-top: 10px; 
+}
+
+.work-section-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.work-section-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.opinio-text {
+  font-size: 30px; 
+}
+
+.trayecto-text {
+  font-size: 18px;
+}
