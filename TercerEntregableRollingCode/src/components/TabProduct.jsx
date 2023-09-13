@@ -3,6 +3,8 @@ import { arrayProductos } from '../data/product'
 import Table from 'react-bootstrap/esm/Table'
 
 const TabProduct = () => {
+
+    
     return (
         <>
             <Table striped bordered hover>
@@ -25,8 +27,8 @@ const TabProduct = () => {
                                 <td><img src={producto.img}/></td>
                                 <td>
                                 <div><button className='btn btn-danger' onClick={() => deleteProduct(producto._id)}>Eliminar</button>
-                                    <button className='btn btn-success' onClick={() => deleteProduct(producto._id)}>Editar</button></div>
-                                    <div><button className='btn btn-warning' onClick={() => deleteProduct(producto._id)}>Destacar producto</button></div>
+                                    <button className='btn btn-success' onClick={() => editProduct(producto._id)}>Editar</button></div>
+                                    <div><button className='btn btn-warning' onClick={() => selectProduct(producto._id)}>Destacar producto</button></div>
                                     
                                 </td>
                             </tr>
