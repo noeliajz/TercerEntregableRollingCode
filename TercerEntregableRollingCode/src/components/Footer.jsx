@@ -17,33 +17,33 @@ const Footer = () => {
             </Row>
             <Row className='justify-content-between '>
                 <Col sm={3} lg={3}  >
-                    <Link to="error404.html" className='fs-4 footer'>Información</Link>
+                    <Link to="error404.html" className='fs-3 footer'>Información</Link>
                     <div className='py-3'>
                       <div className='py-2'>
-                      <Link to="error404.html" className='fs-5 footer'>Preguntas frecuentas</Link>
+                      <Link to="error404.html" className='fs-4 footer'>Preguntas frecuentas</Link>
                       </div>
                       <div className='py-2'>
-                      <Link to="error404.html" className='fs-5 footer'>Términos y condiciones</Link>
+                      <Link to="error404.html" className='fs-4 footer'>Términos y condiciones</Link>
                       </div>
                       <div className='py-2'>
-                      <Link to="error404.html" className='fs-5 footer'>Botón de arrepentimiento</Link>
+                      <Link to="error404.html" className='fs-4 footer'>Botón de arrepentimiento</Link>
                       </div>
                       <div className='py-2'>
-                      <Link to="error404.html" className='fs-5 footer'>Legales de promoción</Link>
+                      <Link to="error404.html" className='fs-4 footer'>Legales de promoción</Link>
                       </div>
                     </div>  
                 </Col>
                 <Col sm={3} lg={3} >
-                  <Link to="error404.html" className='fs-4 footer'>¡Seguinos!</Link>  
+                  <Link to="error404.html" className='fs-3 footer'>¡Seguinos!</Link>  
                     <div className='py-3'>
-                      <Link to="error404.html" className='fs-5 footer'>@KingPet</Link>  
+                      <Link to="error404.html" className='fs-4 footer'>@KingPet</Link>  
                     </div>
                 </Col>
                 <Col sm={3} lg={3} >
-                    <Link to="error404.html" className='fs-4 footer'>Contacto</Link>  
+                    <Link to="error404.html" className='fs-3 footer'>Contacto</Link>  
                 </Col>
                 <Col sm={3}  lg={3} >
-                    <Link to="https://goo.gl/maps/KCtNriVoH4WxpcAEA" className='fs-4 footer'>Ubicación</Link>
+                    <Link to="https://goo.gl/maps/KCtNriVoH4WxpcAEA" className='fs-3 footer'>Ubicación</Link>
                 </Col>
             </Row>
         </Container> 

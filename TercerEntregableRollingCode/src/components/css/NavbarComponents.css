@@ -6,8 +6,8 @@ a{
 }
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comic+Neue:wght@300&family=Dosis:wght@300;500&family=Exo:wght@300&family=Lato:wght@300&family=Lobster&family=Urbanist:wght@200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Pacifico&display=swap');;
  a{
-    font-family: 'Abril Fatface', cursive;
-
- }
+    font-family: 'Kalam', cursive;
+    font-family: 'Pacifico', cursive;
+}
