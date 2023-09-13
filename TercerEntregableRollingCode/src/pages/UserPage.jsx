@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import CardProduct from '../components/CardProduct'
+import CarrouselPublicity from '../components/CarrouselPublicity'
 
 const UserPage = ({ setUserAdmin }) => {
   useEffect(() => {
@@ -7,7 +8,13 @@ const UserPage = ({ setUserAdmin }) => {
   }, [])
   return (
     <>
+    <div className="conteiner">
+      <div className="row">
+      <CarrouselPublicity/>
     <CardProduct/>
+      </div>
+    </div>
+   
     </>
   )
 }
