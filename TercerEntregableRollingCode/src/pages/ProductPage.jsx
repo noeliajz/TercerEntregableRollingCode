@@ -9,9 +9,10 @@ const ProductPage = () => {
   const [product, setProduct] = useState({})
 
 
-  const getProduct = async () => {
+  const getProduct = async (id) => {
     const res = await fetch(`http://localhost:5173/product/${params.id}`)
     const data = await res.json()
+    
     setProduct(data)
     
 
