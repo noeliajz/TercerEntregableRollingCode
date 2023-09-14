@@ -9,6 +9,8 @@ import Turn from '../pages/Turn'
 import UserPage from '../pages/UserPage'
 import {Routes, Route} from 'react-router-dom'
 import Prueba from '../pages/Prueba'
+import Register from '../pages/Register'
+import Login from '../pages/Login'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -22,8 +24,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/turn' element={<Turn/>}/>
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
         <Route  path='/prueba' element={<Prueba/>}/>
-
-
+        <Route  path='/register' element={<Register />}/>
+        <Route  path='/login' element={<Login/>}/>
     </Routes>
   )
 }
