@@ -7,11 +7,12 @@ const Register = () => {
     const [formValue, setFormValue] = useState({
         user:'',
         pass:'',
-        repeatPass:''
-        role:'user'
-        login:'false'
+        repeatPass:'',
+        role:'user',
+        login:'false',
         delete:'false'
     })
+  
 
 const handleChange = (ev) => {
 

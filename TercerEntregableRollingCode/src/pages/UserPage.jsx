@@ -3,6 +3,7 @@ import CardProduct from '../components/CardProduct'
 import CarrouselPublicity from '../components/CarrouselPublicity'
 import PlanDescription from './PlanDescription'
 import '../components/css/UserPage.css'
+import CardProductPrueba from '../components/CardProductPrueba'
 const UserPage = ({ setUserAdmin }) => {
   useEffect(() => {
     setUserAdmin(true)
