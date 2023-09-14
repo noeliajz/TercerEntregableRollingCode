@@ -15,7 +15,12 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-router-dom": "^6.15.0"
+=======
+    "react-router-dom": "^6.15.0",
+    "sweetalert2": "^11.7.27"
+>>>>>>> 4bfbee40543265b294eb6d557f3f694441e3b21d
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
