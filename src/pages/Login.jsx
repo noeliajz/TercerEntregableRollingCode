@@ -1,7 +1,9 @@
 import React from 'react'
+import {Button} from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
+import Swal from 'sweetalert2'
 
-const Login = () => {
+const Login = () => 
     const [formValue, setFormValue] = useState({
         user:'',
         pass:'',
@@ -14,10 +16,21 @@ const Login = () => {
 
     const handleClick = () => {
         const user = JSON.parse(localStorage.getItem('user'))
-       if (user.user === formnValue.user)
-           console.log(user)
+       if (user.pass === formnValue.pass)
+           user.role === 'admin'
+           ?
+           location.href= '/admin'
+           :
+           location.href= '/user'
 
      }
+     else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Las contraseñas no coinciden'
+           
+          })
 
   return (
     <div className= 'w-50 d-flex justify-content-center'>
