@@ -19,7 +19,7 @@ const Prueba = () => {
 return (
   <>
      <h1>product page</h1>
-    <h2>Producto</h2> 
+    <h2>Adquiri todos nuestros productos</h2> 
     <div className="container">
         <div className="row">
             <CardProductPrueba array={products}/>
