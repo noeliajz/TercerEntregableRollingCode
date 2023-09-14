@@ -8,7 +8,7 @@ import ShopingCart from '../pages/ShopingCart'
 import Turn from '../pages/Turn'
 import UserPage from '../pages/UserPage'
 import {Routes, Route} from 'react-router-dom'
-
+import Prueba from '../pages/Prueba'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -21,7 +21,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/planDesc' element={<PlanDescription/>}/>
         <Route  path='/turn' element={<Turn/>}/>
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
-        
+        <Route  path='/prueba' element={<Prueba/>}/>
+
 
     </Routes>
   )

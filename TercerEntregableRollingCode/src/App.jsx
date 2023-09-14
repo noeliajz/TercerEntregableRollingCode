@@ -6,7 +6,6 @@ import RoutesView from './routes/RoutesView'
 
 const App = () => {
   const [userAdmin, setUserAdmin] = useState(false)
-
   return (
     <>
     <Router>
