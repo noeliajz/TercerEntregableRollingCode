@@ -6,6 +6,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink, redirect } from 'react-router-dom';
 import './css/NavbarComponents.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
   const logoutUserFunction = () => {
     setUserAdmin(false)
@@ -42,8 +45,13 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
             <NavLink to="/login " className=' fs-5 styleNavbar px-1'>Iniciar sesión</NavLink>
           </>
           :
+          <>
+          <NavLink to="/shopingCart " className=' fs-5 styleNavbar px-1'>Carrito</NavLink>
+          <FontAwesomeIcon icon="fa-brands fa-twitter" />
           <NavLink to="/login" className=' fs-5 styleNavbar px-1' onClick={() => logoutUserFunction()}>Cerrar sesión</NavLink>
-        
+
+          </>
+          
         }
           
           </Nav>
