@@ -32,7 +32,7 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto ">
           <NavLink to="/" className=' fs-5 styleNavbar px-1 ' >Inicio</NavLink>
-          <NavLink to="/nosotros " className='  fs-5 styleNavbar px-1'>Sobre nosotros</NavLink>
+          <NavLink to="/sobrenosotros " className='  fs-5 styleNavbar px-1'>Sobre nosotros</NavLink>
           <NavLink to="/planDesc " className=' fs-5 styleNavbar px-1'>Nuestros planes</NavLink>
           <NavLink to="/turn " className='  fs-5 styleNavbar px-1'>Solicitar turnos</NavLink> 
         </Nav>

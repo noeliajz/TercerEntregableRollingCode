@@ -27,6 +27,46 @@
 .paddingOneProduct{
   padding-top: 140px;
 }
+
+.paddingHome{
+  padding-top: 200px; 
+}
+
+.primary-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.left-button,
+button.center-button,
+button.right-button {
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #206A5D;
+  color: #fff;
+}
+
+.botonaccede {
+  background-color: red; 
+  color: #fff; 
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+}
+
+.textomarcas {
+  font-size: 24px;
+  margin: 20px 0; 
+}
+
+.nosotros{
+  background-color: #81B214;
+}
 .PlanDescription{
-  background-color: #BFDCAE;
+  background: #BFDCAE;
 }
