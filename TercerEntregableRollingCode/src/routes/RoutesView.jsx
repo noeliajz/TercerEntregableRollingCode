@@ -11,22 +11,20 @@ import {Routes, Route} from 'react-router-dom'
 import Prueba from '../pages/Prueba'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
-import OneProductPrueba from '../pages/OneProductPrueba'
-
+import OneProduct from '../pages/OneProduct'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
     <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/adminPage' element={<AdminPage/>} />
-        <Route  path='/product/:id' element={<ProductPage/>}/>
+        <Route  path='/product/:id' element={<OneProduct/>}/>
         <Route  path='/record/:id' element={<RecordPage/>}/>
         <Route  path='/shopingCart' element={<ShopingCart/>}/>
         <Route  path='/planDesc' element={<PlanDescription/>}/>
         <Route  path='/turn' element={<Turn/>}/>
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
         <Route  path='/prueba' element={<Prueba/>}/>
-        <Route  path='/oneProduct/:id' element={<OneProductPrueba/>}/>
 
     </Routes>
   )

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CardProductPrueba from '../components/CardProductPrueba'
+import CardProductPrueba from '../components/CardsProducts'
 import axios from 'axios';
 
 const Prueba = () => {
