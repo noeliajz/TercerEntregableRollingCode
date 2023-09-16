@@ -3,14 +3,34 @@ import CardProduct from '../components/CardProduct'
 import CarrouselPublicity from '../components/CarrouselPublicity'
 import PlanDescription from './PlanDescription'
 
+/* noe */
+import axios from 'axios';
+import CardsProducts from '../components/CardsProducts'
+/*  */
+
 
 const UserPage = ({ setUserAdmin }) => {
+/* noe */
 
+const [products, setProducts] = useState([])
+const getAllProducts = async () => {
+  const res = await axios.get('http://localhost:8080/api/products')
+  const  {getAllProd}= res.data
+  setProducts(getAllProd)}
+
+  useEffect(() => {
+      getAllProducts()
+  }, [])
+ 
+  console.log(products)
+  /* ------ */
   
 
   useEffect(() => {
     setUserAdmin(true)
   }, [])
+
+
   return (
     <>
       <div className="conteiner " >
@@ -28,12 +48,20 @@ const UserPage = ({ setUserAdmin }) => {
           </div>
         
         
-         <CardProduct />
-        
+{/*          <CardProduct />
+ */}        
+
+{/* noe */}
+<h2 className='text-center'>Adquiri todos nuestros productos</h2> 
+    <div className="container">
+        <div className="row">
+            <CardsProducts array={products}/>
+         </div>
+    </div>
         </div>
       </div>
 
-
+{/* ------ */}
   </>
 
 
