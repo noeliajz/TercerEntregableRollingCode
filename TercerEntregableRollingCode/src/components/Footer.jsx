@@ -43,7 +43,7 @@ const Footer = () => {
                     <Link to="error404.html" className='fs-5 footer'>Contacto</Link>  
                 </Col>
                 <Col sm={3}  lg={3} >
-                    <Link to="https://goo.gl/maps/KCtNriVoH4WxpcAEA" className='fs-3 footer'>Ubicación</Link>
+                    <Link to="https://goo.gl/maps/KCtNriVoH4WxpcAEA" className='fs-5 footer'>Ubicación</Link>
                 </Col>
             </Row>
         </Container> 
