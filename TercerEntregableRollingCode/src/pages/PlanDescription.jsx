@@ -12,7 +12,7 @@ const PlanDescription = () => {
     <>
     <body className="PlanDescription">
     <h2 className="paddingTitle text-center">
-        Conoce todos nuestros a planes!
+        ¡Conoce todos nuestros a planes!
       </h2>
       <Container fluid >
         <Row className=" py-3 justify-content-between">
