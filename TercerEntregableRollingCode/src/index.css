@@ -103,3 +103,21 @@ button.right-button {
   align-items: center; 
   gap: 20px; 
 }
+
+.colorLogin {
+  background: #BFDCAE;
+}
+
+.Login {
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.colorBodyRegister {
+  background: #BFDCAE;
+}
+
+.PaddingRegister {
+  padding-top: 120px;
+  padding-bottom: 50px;
+}

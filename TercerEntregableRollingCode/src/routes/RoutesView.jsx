@@ -27,6 +27,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
         <Route  path='/prueba' element={<Prueba/>}/>
         <Route  path='/sobrenosotros' element={<SobreNosotros/>}/>
+        <Route  path='/register' element={<Register/>}/>
+        <Route  path='/login' element={<Login/>}/>
  
 
     </Routes>
