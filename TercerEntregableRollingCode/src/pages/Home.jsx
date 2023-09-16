@@ -3,6 +3,10 @@ import TabDailyDoc1 from "../components/TabDailyDoc1";
 import { FiArrowRight } from "react-icons/fi";
 import Carrusel from "../components/Carrusel";
 import michis from "../components/img/michis.png";
+import vetex from "../components/img/vetex.jpg";
+import vetee from "../components/img/vetee.png";
+import jon from "../components/img/jon.png"
+import ana from "../components/img/ana.png"
 
 const Home = () => {
   return (
@@ -46,8 +50,61 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <Carrusel/>
-      
+      <Carrusel />
+      <div className="about-section-container">
+        <div className="about-background-image-container">
+          <img src="" alt="" />
+        </div>
+        <div className="about-section-text-container">
+          <h1 className="primary-heading text-center">
+            Conoce a los profesionales de nuestra Clínica
+          </h1>
+          <div className="imagen-profesio">
+            <div className="profesional">
+              <img
+                src={vetee}
+                alt=""
+                style={{ width: "300px", height: "auto" }}
+              />
+              <p className="nombres">Rodrigo Lozano</p>
+            </div>
+            <div className="profesional">
+              <img
+                src={vetex}
+                alt=""
+                style={{ width: "300px", height: "auto" }}
+              />
+              <p className="nombres">Patricia Carello</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='work-section-wrapper'>
+      <div className='work-section-top'>
+        <p className='opinio-text ' > Opiniones de nuestros clientes</p>
+        <h1 className='trayecto-text'>Contamos con mas de cinco años de trayectoria</h1>
+    
+
+        <div className='testimonial-section-bottom'>
+          <img src={jon} alt="" />
+          <p>
+            La atencion de los Veterinarios es excepcional, soy cliente habitual de la Vet.
+          </p>
+          <img src={ana} alt="" />
+          <p>Por fin encontre una vaterinaria en donde mi perro se sienta comodo y no sienta miedo</p>
+          <div className='testimonial-stars-container'>
+            
+            
+          </div>
+         
+
+        </div>
+
+      </div>
+    </div>
+
+
     </>
   );
 };
