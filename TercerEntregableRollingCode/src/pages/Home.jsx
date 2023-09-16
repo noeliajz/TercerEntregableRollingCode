@@ -37,7 +37,7 @@ const Home = () => {
             className="right-button pb-3"
             onClick={() => handleClick("Adultos")}
           >
-            Adultos: Servicios para mascotas de más de 10 años,
+            Adultos: Servicios para mascotas de más de 10 años
           </button>
         </div>
         <div>
