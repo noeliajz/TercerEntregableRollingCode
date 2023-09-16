@@ -17,7 +17,7 @@ const CardProductPrueba = ({array}) => {
           <div className="card-body">
             <h5 className="card-title">{articulo.nombre}</h5>
             <p className="card-text">{articulo.precio}</p>
-            <Link to={`/product/${articulo.id}`} className="btn btn-primary" onClick={() => getProduct(id) }>Ver Mas...</Link>
+            <Link to={`/product/${articulo.id}`} className="btn btn-primary" onClick={() => getProduct(id) }>Ver Mas</Link>
             <button className='btn btn-outline-success' onClick={() => handleClick(articulo._id)}>Agregar Carrito</button>
           </div>
         </div>
