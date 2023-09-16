@@ -103,3 +103,32 @@ button.right-button {
   align-items: center; 
   gap: 20px; 
 }
+
+
+
+.equipo-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.equipo-img {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 20px; /* Tamaño deseado para todas las imágenes */
+}
+
+@media (min-width: 768px) {
+  .nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  
+}
