@@ -2,23 +2,11 @@ import React, { useEffect, useState } from 'react'
 import CardProduct from '../components/CardProduct'
 import CarrouselPublicity from '../components/CarrouselPublicity'
 import PlanDescription from './PlanDescription'
-/* noe */
-import CardProductPrueba from '../components/CardProductPrueba'
-import axios from 'axios'
-/* fin */
+
 
 const UserPage = ({ setUserAdmin }) => {
 
-  /* noe */
-const [products, setProducts] = useState([])
-const getAllProducts = async () => {
-  const res = await axios.get('http://localhost:8080/api/products')
-  const  {getAllProd}= res.data
-  setProducts(getAllProd)}
-  useEffect(() => {
-    getAllProducts()
-}, [])
-/* fin  */
+  
 
   useEffect(() => {
     setUserAdmin(true)
@@ -39,25 +27,17 @@ const getAllProducts = async () => {
             <CarrouselPublicity />
           </div>
         
-        {/* noe */}
-{/*          <CardProduct />
- */}         {/*  */}
+        
+         <CardProduct />
+        
         </div>
       </div>
 
-{/* noe */}
-<>
-     <h1>product page</h1>
-    <h2>Adquiri todos nuestros productos</h2> 
-    <div className="container">
-        <div className="row">
-            <CardProductPrueba array={products}/>
-         </div>
-    </div>
+
   </>
 
-{/*  */}
-    </>
+
+  
   )
 }
 
