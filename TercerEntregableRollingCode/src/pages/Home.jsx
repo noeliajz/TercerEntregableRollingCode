@@ -14,11 +14,6 @@ const Home = () => {
   return (
     <>
       <div>
-<<<<<<< HEAD
-        <div className="container-fluid contenedor-princi paddingHome text-center">
-          <h1 className="titulo-princi">
-            Veterinaria <hr /> King Pet
-=======
       <div className="container contenedor-princi paddingHome text-center">
         <h1 className="titulo-princi">
           Veterinaria <hr /> King Pet
@@ -52,7 +47,7 @@ const Home = () => {
 
       <div className="container text-center about-section-container">
         <h1 className="primary-heading">
-          Conoce a los profesionales de nuestra Clínica
+          Conoce a los profesionales de nuestra Clínica1
         </h1>
         <div className="row">
           <div className="col-md-6">
@@ -69,72 +64,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <div className="container work-section-wrapper">
-        <div className="work-section-top">
-          <p className="opinio-text "> Opiniones de nuestros clientes</p>
-          <h1 className="trayecto-text">
-            Contamos con más de cinco años de trayectoria
->>>>>>> 623318ba06db3f06ada489fe29d58a92943799b2
-          </h1>
-          <p className="welcome">Bienvenidos</p>
-
-          <img className="Perrosimg img-fluid" src={michis} alt="" />
-        </div>
-
-        <div className="container home-text-section text-center">
-          <h1 className="primary-heading">Conoce nuestros planes</h1>
-
-          <div className="primary-text p-3">
-            <button
-              className="servicios pb-3"
-              onClick={() => handleClick("Primeros pasos")}
-            >
-              Primeros pasos: Servicios para mascotas de 0 a 5 años
-            </button>
-            <br />
-            <button
-              className="servicios pb-3"
-              onClick={() => handleClick("Madurando")}
-            >
-              Madurando: Servicios para mascotas de 5 a 10 años
-            </button>
-            <br />
-            <button
-              className="servicios pb-3"
-              onClick={() => handleClick("Adultos")}
-            >
-              Adultos: Servicios para mascotas de más de 10 años
-            </button>
-          </div>
-          <div>
-            <button className="servicios pb-3 text-center">
-              Accede a nuestros productos <FiArrowRight />
-            </button>
-          </div>
-        </div>
-
-        <Carrusel />
-
-        <div className="container text-center about-section-container">
-          <h1 className="primary-heading">
-            Conoce a los profesionales de nuestra Clínica
-          </h1>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="profesional">
-                <img src={vetee} alt="" className="img-fluid rounded-circle" />
-                <p className="nombres">Rodrigo Lozano</p>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="profesional">
-                <img src={vetex} alt="" className="img-fluid rounded-circle" />
-                <p className="nombres">Patricia Carello</p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="container work-section-wrapper">
   <div className="work-section-top">
     <p className="text-center">Opiniones de nuestros clientes</p>
@@ -172,10 +102,10 @@ const Home = () => {
     </div>
   </div>
 </div>
-      </div>
+      </div></div>
       {/* <WeatherApp /> */}
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
