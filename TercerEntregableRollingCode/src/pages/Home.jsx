@@ -7,6 +7,7 @@ import vetex from "../components/img/vetex.jpg";
 import vetee from "../components/img/vetee.png";
 import jon from "../components/img/jon.png";
 import ana from "../components/img/ana.png";
+import { Link } from "react-router-dom";
 // import WeatherApp from "../components/WeatherApp";
 
 
@@ -25,26 +26,20 @@ const Home = () => {
         <h1 className="primary-heading">Conoce nuestros planes</h1>
 
         <div className="primary-text p-3">
-          <button
+          {/* <button
             className="left-button pb-3"
             onClick={() => handleClick("Primeros pasos")}
           >
             Primeros pasos: Servicios para mascotas de 0 a 5 años
-          </button>
+          </button> */}
+          <Link to="/firstplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="left-button pb-3 btn ">Primeros pasos: Servicios para mascotas de 0 a 5 años
+          </Link>
           <br />
-          <button
-            className="center-button pb-3"
-            onClick={() => handleClick("Madurando")}
-          >
-            Madurando: Servicios para mascotas de 5 a 10 años
-          </button>
+          <Link to="/secondplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="center-button pb-3 btn ">Madurando: Servicios para mascotas de 5 a 10 años
+          </Link>
           <br />
-          <button
-            className="right-button pb-3"
-            onClick={() => handleClick("Adultos")}
-          >
-            Adultos: Servicios para mascotas de más de 10 años
-          </button>
+          <Link to="/thirdplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="center-button pb-3 btn ">Adultos: Servicios para mascotas de más de 10 años
+          </Link>
         </div>
         <div>
           <button className="botonaccede pb-3 text-center">

@@ -13,6 +13,9 @@ import Register from '../pages/Register'
 import Login from '../pages/Login'
 import OneProduct from '../pages/OneProduct'
 import SobreNosotros from '../pages/SobreNosotros'
+import FirstPlan from '../pages/FirstPlan'
+import SecondPlan from '../pages/SecondPlan'
+import ThirdPlan from '../pages/thirdPlan'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -29,8 +32,9 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/sobrenosotros' element={<SobreNosotros/>}/>
         <Route  path='/register' element={<Register/>}/>
         <Route  path='/login' element={<Login/>}/>
- 
-
+        <Route  path='/firstplan' element={<FirstPlan/>}/>
+        <Route  path='/secondplan' element={<SecondPlan/>}/>
+        <Route  path='/thirdplan' element={<ThirdPlan/>}/>
     </Routes>
   )
 }
