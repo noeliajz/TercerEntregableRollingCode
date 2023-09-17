@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CardProductPrueba from "../components/CardsProducts";
 import { useParams } from "react-router-dom";
 
 const OneProduct = () => {
