@@ -37,9 +37,7 @@
   align-items: center;
 }
 
-button.left-button,
-button.center-button,
-button.right-button {
+.servicios{
   font-size: 18px;
   margin: 10px 0;
   padding: 10px 20px;
@@ -55,7 +53,6 @@ button.right-button {
   padding: 10px 20px;
   margin-top: 20px;
   cursor: pointer;
-  display: flex;
 }
 
 .textomarcas {
