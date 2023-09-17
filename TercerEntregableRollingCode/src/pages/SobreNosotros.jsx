@@ -7,9 +7,8 @@ import evelin from "../components/img/evelin.png";
 const SobreNosotros = () => {
   return (
     <>
-      return (
-      <div className="container">
-        <h1 className="text-center">Sobre Nosotros</h1>
+      <div className="container pb-5 mt-5">
+        <h1 className="text-about">Sobre Nosotros</h1>
 
         <div className="row">
           <div className="col-6 col-md-3 text-center equipo">

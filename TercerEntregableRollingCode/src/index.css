@@ -38,25 +38,13 @@
   align-items: center;
 }
 
-button.left-button,
-button.center-button,
-button.right-button {
+.servicios{
   font-size: 18px;
   margin: 10px 0;
   padding: 10px 20px;
   background-color: #206A5D;
   color: #fff;
-}
-
-.botonaccede {
-  background-color: red; 
-  color: #fff; 
-  font-size: 18px;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
   cursor: pointer;
-  display: flex;
 }
 
 .textomarcas {
@@ -121,3 +109,13 @@ button.right-button {
   padding-top: 120px;
   padding-bottom: 50px;
 }
+
+.text-about{
+  margin-top: 80px;
+  text-align: center;
+}
+
+.trayecto-text{
+  font-size: 12px;
+}
+
