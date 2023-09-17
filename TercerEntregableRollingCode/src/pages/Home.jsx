@@ -42,9 +42,8 @@ const Home = () => {
           </Link>
         </div>
         <div>
-          <button className="botonaccede pb-3 text-center">
-            Accede a nuestros productos <FiArrowRight />
-          </button>
+          <Link to="/allproducts" style={{background:'#206A5D', color:'#F1F1E8'}}  className="botonaccede pb-3 btn ">Accede a nuestros productos<FiArrowRight />
+          </Link>
         </div>
       </div>
       <Carrusel />
