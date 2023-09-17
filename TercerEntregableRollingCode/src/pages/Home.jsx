@@ -14,27 +14,24 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className="contenedor-princi paddingHome text-center">
+      <div>
+      <div className="container contenedor-princi paddingHome text-center">
         <h1 className="titulo-princi">
           Veterinaria <hr /> King Pet
         </h1>
         <p className="welcome">Bienvenidos</p>
 
-        <img className="Perrosimg" src={michis} alt="" width={1000} />
+        <img className="Perrosimg img-fluid" src={michis} alt="" />
       </div>
-      <div className="home-text-section text-center">
+
+      <div className="container home-text-section text-center">
         <h1 className="primary-heading">Conoce nuestros planes</h1>
 
         <div className="primary-text p-3">
-          {/* <button
-            className="left-button pb-3"
-            onClick={() => handleClick("Primeros pasos")}
-          >
-            Primeros pasos: Servicios para mascotas de 0 a 5 años
-          </button> */}
+
           <Link to="/firstplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="left-button pb-3 btn ">Primeros pasos: Servicios para mascotas de 0 a 5 años
           </Link>
-          <br />
+          <br />        
           <Link to="/secondplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="center-button pb-3 btn ">Madurando: Servicios para mascotas de 5 a 10 años
           </Link>
           <br />
@@ -46,58 +43,52 @@ const Home = () => {
           </Link>
         </div>
       </div>
+
       <Carrusel />
-      <div className="about-section-container">
-        <div className="about-background-image-container">
-          <img src="" alt="" />
-        </div>
-        <div className="about-section-text-container">
-          <h1 className="primary-heading text-center">
-            Conoce a los profesionales de nuestra Clínica
-          </h1>
-          <div className="imagen-profesio">
+
+      <div className="container text-center about-section-container">
+        <h1 className="primary-heading">
+          Conoce a los profesionales de nuestra Clínica
+        </h1>
+        <div className="row">
+          <div className="col-md-6">
             <div className="profesional">
-              <img
-                src={vetee}
-                alt=""
-                style={{ width: "300px", height: "auto" }}
-              />
+              <img src={vetee} alt="" className="img-fluid rounded-circle" />
               <p className="nombres">Rodrigo Lozano</p>
             </div>
+          </div>
+          <div className="col-md-6">
             <div className="profesional">
-              <img
-                src={vetex}
-                alt=""
-                style={{ width: "300px", height: "auto" }}
-              />
+              <img src={vetex} alt="" className="img-fluid rounded-circle" />
               <p className="nombres">Patricia Carello</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="work-section-wrapper">
+      <div className="container work-section-wrapper">
         <div className="work-section-top">
           <p className="opinio-text "> Opiniones de nuestros clientes</p>
           <h1 className="trayecto-text">
-            Contamos con mas de cinco años de trayectoria
+            Contamos con más de cinco años de trayectoria
           </h1>
 
           <div className="testimonial-section-bottom">
-            <img src={jon} alt="" />
+            <img src={jon} alt="" className="img-fluid" />
             <p>
-              La atencion de los Veterinarios es excepcional, soy cliente
+              La atención de los Veterinarios es excepcional, soy cliente
               habitual de la Vet.
             </p>
-            <img src={ana} alt="" />
+            <img src={ana} alt="" className="img-fluid" />
             <p>
-              Por fin encontre una vaterinaria en donde mi perro se sienta
-              comodo y no sienta miedo
+              Por fin encontré una veterinaria en donde mi perro se sienta
+              cómodo y no sienta miedo.
             </p>
             <div className="testimonial-stars-container"></div>
           </div>
         </div>
       </div>
+    </div>
       {/* <WeatherApp /> */}
     </>
   );

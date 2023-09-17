@@ -1,26 +1,45 @@
 import React from "react";
-import gabri from '../components/img/gabri.png'
-import noe from '../components/img/noe.png'
-import lucas from '../components/img/lucas.png'
-import evelin from '../components/img/evelin.png'
+import gabri from "../components/img/gabri.png";
+import noe from "../components/img/noe.png";
+import lucas from "../components/img/lucas.png";
+import evelin from "../components/img/evelin.png";
 
 const SobreNosotros = () => {
   return (
     <>
-      <div className="nosotros">
-        <h1>Sobre Nosotros</h1>
+      return (
+      <div className="container">
+        <h1 className="text-center">Sobre Nosotros</h1>
 
-        <img src={gabri} alt="" className="equipo" />
-        <p>Gabriela : </p>
+        <div className="row">
+          <div className="col-6 col-md-3 text-center equipo">
+            <img
+              src={gabri}
+              alt="Gabriela"
+              className="img-fluid rounded-circle"
+            />
+            <p>Gabriela</p>
+          </div>
 
-        <img src={noe} alt="" className="equipo" />
-        <p>Noelia: </p>
+          <div className="col-6 col-md-3 text-center equipo">
+            <img src={noe} alt="Noelia" className="img-fluid rounded-circle" />
+            <p>Noelia</p>
+          </div>
 
-        <img src={lucas} alt="" className="equipo" />
-        <p>Lucas : </p>
+          <div className="col-6 col-md-3 text-center equipo">
+            <img src={lucas} alt="Lucas" className="img-fluid rounded-circle" />
+            <p>Lucas</p>
+          </div>
 
-        <img src={evelin} alt="" className="equipo" />
-        <p>Evelin: </p>
+          <div className="col-6 col-md-3 text-center equipo">
+            <img
+              src={evelin}
+              alt="Evelin"
+              className="img-fluid rounded-circle"
+            />
+            <p>Evelin</p>
+          </div>
+        </div>
       </div>
     </>
   );
