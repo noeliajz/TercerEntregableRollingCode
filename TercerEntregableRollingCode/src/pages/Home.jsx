@@ -14,11 +14,6 @@ const Home = () => {
   return (
     <>
       <div>
-<<<<<<< HEAD
-        <div className="container-fluid contenedor-princi paddingHome text-center">
-          <h1 className="titulo-princi">
-            Veterinaria <hr /> King Pet
-=======
       <div className="container contenedor-princi paddingHome text-center">
         <h1 className="titulo-princi">
           Veterinaria <hr /> King Pet
@@ -75,7 +70,6 @@ const Home = () => {
           <p className="opinio-text "> Opiniones de nuestros clientes</p>
           <h1 className="trayecto-text">
             Contamos con más de cinco años de trayectoria
->>>>>>> 623318ba06db3f06ada489fe29d58a92943799b2
           </h1>
           <p className="welcome">Bienvenidos</p>
 
@@ -174,8 +168,12 @@ const Home = () => {
 </div>
       </div>
       {/* <WeatherApp /> */}
+      </div>
     </>
-  );
+
+
+
+);
 };
 
 export default Home;
