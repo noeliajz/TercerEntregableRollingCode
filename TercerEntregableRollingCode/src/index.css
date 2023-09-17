@@ -45,7 +45,7 @@ button.right-button {
   margin: 10px 0;
   padding: 10px 20px;
   background-color: #206A5D;
-  color: #fff;
+  color: #F1F1E8;
 }
 
 .botonaccede {
@@ -69,6 +69,11 @@ button.right-button {
 }
 .PlanDescription{
   background: #BFDCAE;
+}
+.FirstPlan{
+  background: #F1F1E8;
+  color: #206A5D;
+
 }
 .profesional {
   text-align: center;

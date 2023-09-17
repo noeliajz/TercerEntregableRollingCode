@@ -8,11 +8,14 @@ import ShopingCart from '../pages/ShopingCart'
 import Turn from '../pages/Turn'
 import UserPage from '../pages/UserPage'
 import {Routes, Route} from 'react-router-dom'
-import Prueba from '../pages/Prueba'
+import AllProducts from '../pages/AllProducts'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import OneProduct from '../pages/OneProduct'
 import SobreNosotros from '../pages/SobreNosotros'
+import FirstPlan from '../pages/FirstPlan'
+import SecondPlan from '../pages/SecondPlan'
+import ThirdPlan from '../pages/thirdPlan'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -25,12 +28,13 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/planDesc' element={<PlanDescription/>}/>
         <Route  path='/turn' element={<Turn/>}/>
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
-        <Route  path='/prueba' element={<Prueba/>}/>
+        <Route  path='/allproducts' element={<AllProducts/>}/>
         <Route  path='/sobrenosotros' element={<SobreNosotros/>}/>
         <Route  path='/register' element={<Register/>}/>
         <Route  path='/login' element={<Login/>}/>
- 
-
+        <Route  path='/firstplan' element={<FirstPlan/>}/>
+        <Route  path='/secondplan' element={<SecondPlan/>}/>
+        <Route  path='/thirdplan' element={<ThirdPlan/>}/>
     </Routes>
   )
 }
