@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import CardProductPrueba from '../components/CardsProducts'
 import axios from 'axios';
+import CardsAllProducts from '../components/CardsAllProducts';
 
-const Prueba = () => {
+const AllProducts = () => {
   const [products, setProducts] = useState([])
   const getAllProducts = async () => {
     const res = await axios.get('http://localhost:8080/api/products')
@@ -17,16 +17,18 @@ const Prueba = () => {
 
 return (
   <>
-    <h2 className='text-center'>Adquiri todos nuestros productos</h2> 
-    <div className="container">
-        <div className="row">
-            <CardProductPrueba array={products}/>
+    <body className='AllProducts'>
+    <h2 className='text-center '>Adquiri todos nuestros productos</h2> 
+    <div className='container'>
+        <div className="row py-4">
+            <CardsAllProducts array={products}/>
          </div>
     </div>
+    </body>
   </>
 )
 }
     
 
 
-export default Prueba
+export default AllProducts

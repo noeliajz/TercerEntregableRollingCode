@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+
 
 const ShopingCart = () => {
   const [products, setProducts] = useState([])
@@ -8,12 +10,14 @@ const ShopingCart = () => {
     setProducts(getAllProd)}
  
     useEffect(() => {
-    
         getAllProducts()
     }, [])
+   
+    console.log(products)
+
   return (
     <>
-      <h1>Carrito</h1>
+      <h1 className='paddingHome'>Carrito</h1>
     </>
   )
 }

@@ -7,9 +7,8 @@ import evelin from "../components/img/evelin.png";
 const SobreNosotros = () => {
   return (
     <>
-      <div className="container pb-5 mt-5">
-        <h1 className="text-about">Sobre Nosotros</h1>
-
+      <div className="container sobreNosotros">
+        <h1 className="text-center">Sobre Nosotros</h1>
         <div className="row">
           <div className="col-6 col-md-3 text-center equipo">
             <img
@@ -19,17 +18,14 @@ const SobreNosotros = () => {
             />
             <p>Gabriela</p>
           </div>
-
           <div className="col-6 col-md-3 text-center equipo">
             <img src={noe} alt="Noelia" className="img-fluid rounded-circle" />
             <p>Noelia</p>
           </div>
-
           <div className="col-6 col-md-3 text-center equipo">
             <img src={lucas} alt="Lucas" className="img-fluid rounded-circle" />
             <p>Lucas</p>
           </div>
-
           <div className="col-6 col-md-3 text-center equipo">
             <img
               src={evelin}

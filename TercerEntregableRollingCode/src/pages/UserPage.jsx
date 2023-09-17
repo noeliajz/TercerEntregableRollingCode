@@ -5,7 +5,7 @@ import PlanDescription from './PlanDescription'
 
 /* noe */
 import axios from 'axios';
-import CardsProducts from '../components/CardsProducts'
+import CardsAllProducts from '../components/CardsAllProducts'
 /*  */
 
 
@@ -55,7 +55,7 @@ const getAllProducts = async () => {
 <h2 className='text-center'>Adquiri todos nuestros productos</h2> 
     <div className="container">
         <div className="row">
-            <CardsProducts array={products}/>
+            <CardsAllProducts array={products}/>
          </div>
     </div>
         </div>

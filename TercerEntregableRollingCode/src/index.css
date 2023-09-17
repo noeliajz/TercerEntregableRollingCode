@@ -1,35 +1,34 @@
-.styleNavbar{
+.styleNavbar {
   list-style: none;
   text-decoration: none;
   color: rgb(32, 106, 93);
   border-radius: 40px;
-  }
-  
-  .styleNavbar:hover {
-    background: rgb(191, 220, 174);
-  }
-  
-  .styleColorNavbar{
-    background-color: rgb(241, 241, 232);
-  }
+}
 
-.footer{
+.styleNavbar:hover {
+  background: rgb(191, 220, 174);
+}
+
+.styleColorNavbar {
+  background-color: rgb(241, 241, 232);
+}
+
+.footer {
   background: rgb(129, 178, 20);
   text-decoration: none;
   color: rgb(241, 241, 232);
   text-shadow: 1px 1px 2px rgb(32, 106, 93);
-
 }
 
-.paddingTitle{
+.paddingTitle {
   padding-top: 100px;
 }
-.paddingOneProduct{
+.paddingOneProduct {
   padding-top: 140px;
 }
 
-.paddingHome{
-  padding-top: 200px; 
+.paddingHome {
+  padding-top: 200px;
 }
 
 .primary-text {
@@ -42,58 +41,71 @@
   font-size: 18px;
   margin: 10px 0;
   padding: 10px 20px;
-  background-color: #206A5D;
+  background-color: #206a5d;
+  color: #f1f1e8;
+}
+
+.botonaccede {
+  background-color: red;
   color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
   cursor: pointer;
 }
 
 .textomarcas {
   font-size: 24px;
-  margin: 20px 0; 
+  margin: 20px 0;
 }
 
-.nosotros{
-  background-color: #81B214;
+.nosotros {
+  background-color: #81b214;
 }
-.PlanDescription{
-  background: #BFDCAE;
+.PlanDescription {
+  background: #bfdcae;
+}
+.FirstPlan {
+  background: #f1f1e8;
+  color: #206a5d;
 }
 .profesional {
   text-align: center;
-  flex: 1; 
-  max-width: 400px; 
+  flex: 1;
+  max-width: 400px;
 }
 
 .profesional img {
-  width: 100%; 
-  max-height: 400px; 
-  height: auto; 
+  width: 100%;
+  max-height: 400px;
+  height: auto;
 }
 
 .imagen-profesio {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; 
-  justify-content: center; 
-  align-items: flex-start; 
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .work-section-wrapper {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  text-align: left; 
+  text-align: left;
 }
 
 .testimonial-section-bottom {
   display: flex;
-  align-items: center; 
-  gap: 20px; 
+  align-items: center;
+  gap: 20px;
 }
 
 .colorLogin {
-  background: #BFDCAE;
+  background: #bfdcae;
 }
 
 .Login {
@@ -102,20 +114,22 @@
 }
 
 .colorBodyRegister {
-  background: #BFDCAE;
+  background: #bfdcae;
 }
 
 .PaddingRegister {
   padding-top: 120px;
   padding-bottom: 50px;
 }
-
-.text-about{
-  margin-top: 80px;
-  text-align: center;
+.AllProducts {
+  padding-top: 130px;
+  background: #f1f1e8;
+  color: #81b214;
+  text-shadow: 1px 1px 1px #206a5d;
 }
-
-.trayecto-text{
-  font-size: 12px;
+.sobreNosotros {
+  padding-top: 130px;
 }
-
+.colorTextTurn {
+  color: #206a5d;
+}
