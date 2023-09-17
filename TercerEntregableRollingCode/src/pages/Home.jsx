@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div>
       <div className="container contenedor-princi paddingHome text-center">
         <h1 className="titulo-princi">
           Veterinaria <hr /> King Pet
@@ -102,10 +101,13 @@ const Home = () => {
     </div>
   </div>
 </div>
-      </div></div>
+      </div>
       {/* <WeatherApp /> */}
     </>
-  )
-}
 
-export default Home
+
+
+);
+};
+
+export default Home;
