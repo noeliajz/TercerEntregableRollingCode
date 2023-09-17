@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CardProductPrueba from '../components/CardsProducts'
 import axios from 'axios';
 
-const Prueba = () => {
+const AllProducts = () => {
   const [products, setProducts] = useState([])
   const getAllProducts = async () => {
     const res = await axios.get('http://localhost:8080/api/products')
@@ -29,4 +29,4 @@ return (
     
 
 
-export default Prueba
+export default AllProducts
