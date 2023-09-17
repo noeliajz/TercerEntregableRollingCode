@@ -13,7 +13,6 @@ const CardsAllProducts = ({array}) => {
             <p className="card-text">{articulo.precio}</p>
             <Link to={`/product/${articulo._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >Ver Mas</Link>
             <button className='btn btn-outline-success' onClick={() => handleClick(articulo._id)}>Agregar Carrito</button>
-        
           </div>
         </div>
       )
