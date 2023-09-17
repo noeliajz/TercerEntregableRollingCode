@@ -4,10 +4,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
 
 const PlanDescription = () => {
-  
-
   return (
     <>
     <body className="PlanDescription">
@@ -21,7 +21,8 @@ const PlanDescription = () => {
               <Card.Header className='text-center fs-4' style={{color:'#D2DE32',background:'#206A5D'}}>Plan Primeros pasos</Card.Header>
               <Card.Body className="text-center">
                 <Card.Img src="https://media.lmneuquen.com/p/7c3155642d13e2c356d31604a8b8c296/adjuntos/195/imagenes/002/377/0002377931/motivos-y-soluciones-las-mascotas-que-prefieren-callar.jpg" alt="Card image"  height={'300px'} width={'300px'}/>
-                <Button variant="primary" className="mt-4" >Más info</Button>
+                <Link to="/firstplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="botonaccede pb-3 btn ">Más info<FiArrowRight />
+                </Link>
               </Card.Body>
             </Card>
           </Col>
@@ -35,7 +36,8 @@ const PlanDescription = () => {
                 height={"300px"}
                 width={"300px"}
               />
-                <Button variant="primary" className="mt-4"  >Más info</Button>
+                <Link to="/secondplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="botonaccede pb-3 btn ">Más info<FiArrowRight />
+                </Link>
               </Card.Body>
             </Card>
           </Col>
@@ -49,7 +51,8 @@ const PlanDescription = () => {
                 height={"300px"}
                 width={"300px"}
               />
-                <Button variant="primary" className="mt-4"  >Más info</Button>
+              <Link to="/thirdplan" style={{background:'#206A5D', color:'#F1F1E8'}}  className="botonaccede pb-3 btn ">Más info<FiArrowRight />
+                </Link>
               </Card.Body>
             </Card>
           </Col>
