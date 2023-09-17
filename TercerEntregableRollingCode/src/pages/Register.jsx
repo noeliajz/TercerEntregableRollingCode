@@ -39,6 +39,44 @@ const Register = () => {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
+                <Form.Label>Nombre</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="user"
+                  onChange={handleChange}
+                  placeholder="name@example.com"
+                />
+              </Form.Group>
+
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Apellido</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="pass"
+                  onChange={handleChange}
+                  placeholder="name@example.com"
+                />
+              </Form.Group>
+
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Dirección</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="repeatPass"
+                  onChange={handleChange}
+                  placeholder="name@example.com"
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
                 <Form.Label>Usuario</Form.Label>
                 <Form.Control
                   type="text"
@@ -73,6 +111,7 @@ const Register = () => {
                   placeholder="name@example.com"
                 />
               </Form.Group>
+
               <Button onClick={handleClick}>Registrar</Button>
             </Form>
           </Col>

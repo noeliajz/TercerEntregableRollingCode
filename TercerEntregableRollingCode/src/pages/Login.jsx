@@ -59,6 +59,9 @@ const Login = () => {
                   />
                 </Form.Group>
                 <Button onClick={handleClick}>Iniciar Sesión</Button>
+                <Button onClick={handleClick}>Iniciar con Facebook</Button>
+                <Button onClick={handleClick}>Iniciar con Gmail</Button>
+                <Button onClick={handleClick}>Recuperar Contraseña</Button>
               </Form>
             </Col>
           </Row>
