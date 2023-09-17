@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const CardsAllProducts = ({array}) => {
+  
+  const handleClick= async (id) =>{
+    console.log(id)
+    
+  }
+
   return (
     <> 
     {
