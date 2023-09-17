@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink, redirect } from 'react-router-dom';
 import './css/NavbarComponents.css'
-
+import logo from "../components/img/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -20,7 +20,7 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
       <Navbar.Brand href="/" style={{color:' rgb(129, 178, 20)'}} >
             <img
               alt=""
-              src="./img/icono.jpeg"
+              src={logo}
               width="30"
               height="30"
               className="d-inline-block align-top"
