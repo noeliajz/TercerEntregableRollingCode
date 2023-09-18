@@ -17,6 +17,7 @@ import FirstPlan from '../pages/FirstPlan'
 import SecondPlan from '../pages/SecondPlan'
 import ThirdPlan from '../pages/thirdPlan'
 import EditProductPage from '../pages/EditProductPage'
+import CreateProductPage from '../pages/CreateProductPage'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -37,6 +38,7 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/secondplan' element={<SecondPlan/>}/>
         <Route  path='/thirdplan' element={<ThirdPlan/>}/>
         <Route path='/edit/:id' element={<EditProductPage />} />
+        <Route path='/create' element={<CreateProductPage />} />
     </Routes>
   )
 }
