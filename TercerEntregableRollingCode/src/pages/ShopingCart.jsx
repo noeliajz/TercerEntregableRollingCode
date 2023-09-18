@@ -7,6 +7,7 @@ const ShopingCart = () => {
   const [cart, setCart] = useState([])
   const getCartUser = async () => {
     const idUser = JSON.parse(localStorage.getItem('idUser'))
+   console.log(idUser)
     const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCartUser = await resCartUser.json()
     console.log(dataCartUser.getUser.idCart)
