@@ -1,3 +1,4 @@
+import React from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { Calendar } from "react-date-range"
 import format from "date-fns/format"
@@ -13,15 +14,15 @@ const Calendarcomp = () => {
 const  [calendar, Setcalendar] = useState('')
 
 // open close
-const [open, setOpen] =useState(false)
+const [open, setOpen] = useState(false)
 
 const refOne = useRef(null)
 
 useEffect(() => {
   
   Setcalendar(format(new Date, 'MM/dd/yyyy'))
-  document.addEventListener("keydown", hideOnScape, True)
-  document.addEventListener("click", hideOnClickOutside, True)
+  document.addEventListener("keydown", hideOnEscape, true)
+  document.addEventListener("click", hideOnClickOutside, true)
 }, [])
 
 
@@ -34,7 +35,7 @@ const hideOnEscape = (e) => {
 
 }
 
-const hideOnClickOutside = () => {
+const hideOnClickOutside = (e) => {
   // console.log(refOne.current)
   // console.log(e.target)
   if ( refOne.current && !refOne.current.contains(e.target) ){
@@ -57,7 +58,7 @@ Setcalendar(format(date, 'MM/dd/yyyy'))
       value={ calendar }
       readOnly
       className='inputBox'
-      onclick={() => setOpen(open => !open) }
+      onClick={() => setOpen(open => !open) }
       />
 
 

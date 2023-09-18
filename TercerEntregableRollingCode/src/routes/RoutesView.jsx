@@ -16,7 +16,11 @@ import SobreNosotros from '../pages/SobreNosotros'
 import FirstPlan from '../pages/FirstPlan'
 import SecondPlan from '../pages/SecondPlan'
 import ThirdPlan from '../pages/thirdPlan'
+<<<<<<< HEAD
+import Datepicker from '../pages/Datepicker'
+=======
 import EditProductPage from '../pages/EditProductPage'
+>>>>>>> 67fa048324013334a082adb1b104e24c555e5de2
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -36,7 +40,11 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/firstplan' element={<FirstPlan/>}/>
         <Route  path='/secondplan' element={<SecondPlan/>}/>
         <Route  path='/thirdplan' element={<ThirdPlan/>}/>
+<<<<<<< HEAD
+        <Route  path='/datepicker' element={<Datepicker/>}/>
+=======
         <Route path='/edit/:id' element={<EditProductPage />} />
+>>>>>>> 67fa048324013334a082adb1b104e24c555e5de2
     </Routes>
   )
 }
