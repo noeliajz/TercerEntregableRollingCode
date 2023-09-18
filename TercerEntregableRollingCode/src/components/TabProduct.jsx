@@ -8,6 +8,8 @@ import Swal from 'sweetalert2'
 
 const TabProduct = () => {
     const [products, setProducts] = useState([])
+    const [refreshProd, setRefreshProd] = useState(false);
+    
     const getAllProducts = async () => {
       const res = await axios.get('http://localhost:8080/api/products')
       const  {getAllProd}= res.data
@@ -69,6 +71,11 @@ const TabProduct = () => {
           }
         })
       }
+      useEffect(() => {
+        getAllProducts()
+        setRefreshProd(false)
+      }, [refreshProd])
+    
     
     return (
         <>
@@ -79,7 +86,8 @@ const TabProduct = () => {
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>imagen</th>
-                        <th><button className='btn btn-primary' onClick={() => deleteProduct(producto._id)}>AGREGAR PRODUCTO</button></th>
+                        <th>
+                        <Link to={`/create`} className="btn btn-primary" style={{background:'#206A5D', color:'#F1F1E8'}} >AGREGAR PRODUCTO</Link></th>
                     </tr>
                 </thead>
                 <tbody>

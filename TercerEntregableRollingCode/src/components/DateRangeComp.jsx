@@ -1,3 +1,4 @@
+import React from "react"
 import { useEffect, useRef, useState } from 'react'
 import { DateRange } from "react-date-range"
 
@@ -28,8 +29,8 @@ const refOne = useRef(null)
 
 useEffect(() => {
   
-  document.addEventListener("keydown", hideOnScape, True)
-  document.addEventListener("click", hideOnClickOutside, True)
+  document.addEventListener("keydown", hideOnEscape, true)
+  document.addEventListener("click", hideOnClickOutside, true)
 }, [])
 
 
@@ -42,7 +43,7 @@ const hideOnEscape = (e) => {
 
 }
 
-const hideOnClickOutside = () => {
+const hideOnClickOutside = (e) => {
   // console.log(refOne.current)
   // console.log(e.target)
   if ( refOne.current && !refOne.current.contains(e.target) ){
@@ -58,14 +59,14 @@ const hideOnClickOutside = () => {
       value={ `${format(range[0].startDate, "MM/dd/yyyy")} to ${format(range[0].endDate, "MM/dd/yyyy")}` }
       readOnly
       className='inputBox'
-      onclick={() => setOpen(open => !open) }
+      onClick={() => setOpen(open => !open) }
       />
 
 
       <div ref={refOne}>
 
       {open &&
-    <DateRange 
+    <DateRange
     onChange={item => setRange([item.selection])}
     editableDateInputs={true}
     moveRangeOnFistSelection={false}

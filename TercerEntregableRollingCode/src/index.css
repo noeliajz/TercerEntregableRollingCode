@@ -134,3 +134,8 @@
 .colorTextTurn {
   color: #206a5d;
 }
+
+.custom-image{
+  width: 150px; 
+  height: 150px;
+}
