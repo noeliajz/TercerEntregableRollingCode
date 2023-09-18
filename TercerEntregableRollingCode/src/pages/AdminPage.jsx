@@ -69,7 +69,7 @@ const AdminPage = () => {
                     <TabProduct />
                   </Tab>
                   <Tab eventKey="users" title="USUARIOS">
-                    <TabUsers />
+                
                   </Tab>
                 </Tabs>
               </div>

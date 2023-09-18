@@ -5,7 +5,7 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 
 const TabUsers = () => {
-  const [users, setUsers] = useState([])
+ /* const [users, setUsers] = useState([])
   
 
   const getAllUsers = async () => {
@@ -15,9 +15,27 @@ const TabUsers = () => {
  
     useEffect(() => {
       getAllUsers()
+    }, [])*/
+    const [users, setUsers] = useState([])
+  
+
+  const getAllUsers = async () => {
+    const token = JSON.parse(localStorage.getItem('token'))
+
+    const res = await fetch('http://localhost:8080/api/users', {
+      method:'GET',
+      headers:{
+        'content-type':'application/json',
+        'authorization': `Bearer ${token}` 
+      }
+    })
+    const { allUsers } = await res.json()
+    setUsers(allUsers)
+  }
+
+    useEffect(() => {
+      getAllUsers()
     }, [])
-
-
 
 
   return (
