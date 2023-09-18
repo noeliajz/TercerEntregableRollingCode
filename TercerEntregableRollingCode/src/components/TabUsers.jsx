@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { arrayUsers } from '../data/usurarios'
 import Table from 'react-bootstrap/esm/Table'
+import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const TabUsers = () => {
+  const [users, setUsers] = useState([])
+  
+
+  const getAllUsers = async () => {
+    const res = await fetch('http://localhost:8080/api/users')
+    const  {getAllUs}= res.data
+    setUsers(getAllUs)}
+ 
+    useEffect(() => {
+      getAllUsers()
+    }, [])
+
+
+
+
   return (
     <Table striped bordered hover>
     <thead>
@@ -15,13 +32,13 @@ const TabUsers = () => {
     </thead>
     <tbody>
       {
-        arrayUsers.map((usuario) =>
+        users.map((user) =>
           <tr>
-            <td>{usuario.id}</td>
-            <td>{usuario.nombre_usuario} {usuario.apellido}</td>
-            <td>{usuario.role}</td>
-            <td><button className='btn btn-danger' onClick={() => deleteProduct(producto._id)}>Eliminar</button>
-            <button className='btn btn-success' onClick={() => deleteProduct(producto._id)}>Editar</button> </td>
+            <td>{user._id}</td>
+            <td>{user.nombre} {usuario.apellido}</td>
+            <td>{user.role}</td>
+            <td><button className='btn btn-danger' onClick={() => deleteUser(user._id)}>Eliminar</button>
+            <button className='btn btn-success' onClick={() => editUser(user._id)}>Editar</button> </td>
           </tr>
 
         )

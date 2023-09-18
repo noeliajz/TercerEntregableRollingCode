@@ -16,6 +16,7 @@ import SobreNosotros from '../pages/SobreNosotros'
 import FirstPlan from '../pages/FirstPlan'
 import SecondPlan from '../pages/SecondPlan'
 import ThirdPlan from '../pages/thirdPlan'
+import EditProductPage from '../pages/EditProductPage'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -35,6 +36,7 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/firstplan' element={<FirstPlan/>}/>
         <Route  path='/secondplan' element={<SecondPlan/>}/>
         <Route  path='/thirdplan' element={<ThirdPlan/>}/>
+        <Route path='/edit/:id' element={<EditProductPage />} />
     </Routes>
   )
 }
