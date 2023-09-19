@@ -102,7 +102,7 @@ const TabUsers = () => {
             <td>{user.nombre} {user.apellido}</td>
             <td>{user.role}</td>
             <td><button className='btn btn-danger' onClick={() => deleteUser(user._id)}>Eliminar</button>
-            <button className='btn btn-success' onClick={() => editUser(user._id)}>Editar</button> </td>
+            <Link to={`/editUser/${user._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link></td>
           </tr>
 
         )

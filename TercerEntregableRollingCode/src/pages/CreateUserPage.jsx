@@ -8,6 +8,7 @@ const CreateUserPage = () => {
     const [formValues, setFormValues] = useState({
       name: '',
       familyName: '',
+      mail:'',
       address:'',
       pass:'',
       rpass:'',
@@ -23,7 +24,7 @@ const CreateUserPage = () => {
   
     const handleClick = async (ev) => {
       ev.preventDefault()
-      if (formValues.name === '' && formValues.familyName === '' && formValues.formValues.address === '' && formValues.pass === ''  && formValues.rpass === '') {
+      if (formValues.name === '' && formValues.familyName === '' && formValues.mail=== '' && formValues.formValues.address === '' && formValues.pass === ''  && formValues.rpass === '') {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
@@ -43,17 +44,23 @@ const CreateUserPage = () => {
   
         const res = await fetch(`http://localhost:8080/api/users`, {
           method: 'POST',
-          /*headers: {
+         headers: {
             'Content-Type': 'application/json'
-          },*/
+          },
           body: JSON.stringify({
             nombre: formValues.name,
+           
             apellido: formValues.familyName,
             direccion: formValues.address,
+             usuario:formValues.mail,
+            
             contrasenia: formValues.pass,
-            role: formValues.role
+           role: formValues.role
+            
           })
+          
         })
+        
         const resCreateProd = await res.json()
   
         if (resCreateProd.status === 201) {
@@ -67,6 +74,7 @@ const CreateUserPage = () => {
           setFormValues({
             name: '',
             familyName: '',
+            mail:'',
             address:'',
             pass:'',
             role: ''
@@ -90,6 +98,10 @@ const CreateUserPage = () => {
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label">Apellido</label>
             <input type="text" name='familyName' value={formValues.familyName} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label for="exampleInputEmail1" className="form-label">Mail</label>
+            <input type="mail" name='mail' value={formValues.mail} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
           </div>
           <div className="mb-3">
             <label for="exampleInputPassword1" className="form-label">Domicilio</label>

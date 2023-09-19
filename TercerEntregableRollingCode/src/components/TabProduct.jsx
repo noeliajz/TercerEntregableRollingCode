@@ -100,7 +100,7 @@ const TabProduct = () => {
                                 <td><img src={product.img}/></td>
                                 <td>
                                 <div><button className='btn btn-danger'onClick={() => deleteProduct(product._id)}>Eliminar</button>
-                                <Link to={`/edit/${product._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link> </div>
+                                <Link to={`/editProduct/${product._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link> </div>
                                     <div><button className='btn btn-warning' onClick={() => selectProduct(products._id)}>Destacar producto</button></div>
                                     
                                 </td>
