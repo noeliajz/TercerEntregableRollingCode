@@ -49,13 +49,11 @@ const CreateUserPage = () => {
           },
           body: JSON.stringify({
             nombre: formValues.name,
-           
             apellido: formValues.familyName,
             direccion: formValues.address,
-             usuario:formValues.mail,
-            
+            usuario:formValues.mail,           
             contrasenia: formValues.pass,
-           role: formValues.role
+            //role: formValues.role
             
           })
           
