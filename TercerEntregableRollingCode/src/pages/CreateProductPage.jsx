@@ -40,9 +40,9 @@ const CreateProductPage = () => {
             'authorization': `Bearer ${token}`
           },
           body: JSON.stringify({
-            nombre: formValues.nombre,
-            precio: formValues.precio,
-             codigo: formValues.codigo,
+            nombre: formValues.name,
+            precio: formValues.price,
+            codigo: formValues.code,
             descripcion: formValues.descripcion,
             cantidad: formValues.cantidad
           })
@@ -58,15 +58,15 @@ const CreateProductPage = () => {
           )
   
           setFormValues({
-            nombre: '',
+            name: '',
             descripcion:'',
-            precio: 0,          
-            codigo: '',
+            price: 0,          
+            code: '',
             cantidad:0
           })
   
          setTimeout(() => {
-          navigate('/admin')
+          navigate('/adminPage')
          }, 1000);
         }
       }

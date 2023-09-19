@@ -87,7 +87,7 @@ const TabProduct = () => {
                         <th>Precio</th>
                         <th>imagen</th>
                         <th>
-                        <Link to={`/create`} className="btn btn-primary" style={{background:'#206A5D', color:'#F1F1E8'}} >AGREGAR PRODUCTO</Link></th>
+                        <Link to={`/createProd`} className="btn btn-primary" style={{background:'#206A5D', color:'#F1F1E8'}} >AGREGAR PRODUCTO</Link></th>
                     </tr>
                 </thead>
                 <tbody>

@@ -19,6 +19,7 @@ import ThirdPlan from '../pages/thirdPlan'
 import Datepicker from '../pages/Datepicker'
 import EditProductPage from '../pages/EditProductPage'
 import CreateProductPage from '../pages/CreateProductPage'
+import CreateUserPage from '../pages/CreateUserPage'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -40,7 +41,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/thirdplan' element={<ThirdPlan/>}/>
         <Route  path='/datepicker' element={<Datepicker/>}/>
         <Route path='/edit/:id' element={<EditProductPage />} />
-        <Route path='/create' element={<CreateProductPage />} />
+        <Route path='/createProd' element={<CreateProductPage />} />
+        <Route path='/createUser' element={<CreateUserPage />} />
     </Routes>
   )
 }
