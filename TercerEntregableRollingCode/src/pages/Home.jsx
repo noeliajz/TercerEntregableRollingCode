@@ -77,7 +77,7 @@ const Home = () => {
           <img
             src={jon}
             alt=""
-            className="img-fluid rounded-circle"
+            className="img-fluid rounded-circle custom-image"
           />
           <p>
             La atención de los Veterinarios es excepcional, soy cliente
@@ -90,7 +90,7 @@ const Home = () => {
           <img
             src={ana}
             alt=""
-            className="img-fluid rounded-circle"
+            className="img-fluid rounded-circle custom-image"
           />
           <p>
             Por fin encontré una veterinaria en donde mi perro se sienta

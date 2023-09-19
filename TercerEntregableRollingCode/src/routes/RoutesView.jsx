@@ -16,6 +16,11 @@ import SobreNosotros from '../pages/SobreNosotros'
 import FirstPlan from '../pages/FirstPlan'
 import SecondPlan from '../pages/SecondPlan'
 import ThirdPlan from '../pages/thirdPlan'
+import Datepicker from '../pages/Datepicker'
+import EditProductPage from '../pages/EditProductPage'
+import CreateProductPage from '../pages/CreateProductPage'
+import CreateUserPage from '../pages/CreateUserPage'
+import EditUserPage from '../pages/EditUserPage'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -35,6 +40,11 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/firstplan' element={<FirstPlan/>}/>
         <Route  path='/secondplan' element={<SecondPlan/>}/>
         <Route  path='/thirdplan' element={<ThirdPlan/>}/>
+        <Route  path='/datepicker' element={<Datepicker/>}/>
+        <Route path='/editProduct/:id' element={<EditProductPage />} />
+        <Route path='/createProd' element={<CreateProductPage />} />
+        <Route path='/createUser' element={<CreateUserPage />} />
+        <Route path='/editUser/:id' element={<EditUserPage />} />
     </Routes>
   )
 }

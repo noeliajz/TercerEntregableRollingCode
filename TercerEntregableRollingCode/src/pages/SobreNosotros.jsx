@@ -16,15 +16,15 @@ const SobreNosotros = () => {
               alt="Gabriela"
               className="img-fluid rounded-circle"
             />
-            <p>Gabriela</p>
+            <p>Gabriela: Developer</p>
           </div>
           <div className="col-6 col-md-3 text-center equipo">
             <img src={noe} alt="Noelia" className="img-fluid rounded-circle" />
-            <p>Noelia</p>
+            <p>Noelia: Teach Lead</p>
           </div>
           <div className="col-6 col-md-3 text-center equipo">
             <img src={lucas} alt="Lucas" className="img-fluid rounded-circle" />
-            <p>Lucas</p>
+            <p>Lucas: Developer</p>
           </div>
           <div className="col-6 col-md-3 text-center equipo">
             <img
@@ -32,7 +32,7 @@ const SobreNosotros = () => {
               alt="Evelin"
               className="img-fluid rounded-circle"
             />
-            <p>Evelin</p>
+            <p>Evelin: Scrum Master </p>
           </div>
         </div>
       </div>
