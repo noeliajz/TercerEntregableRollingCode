@@ -53,7 +53,7 @@ const DateRangePickerComp = () => {
         
         
           return (
-            <div className='calendarWrap'>
+            <div className='App'>
         
               <input 
               value={ `${format(range[0].startDate, "MM/dd/yyyy")} to ${format(range[0].endDate, "MM/dd/yyyy")}` }

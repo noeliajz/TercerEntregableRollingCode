@@ -1,24 +1,23 @@
 import React from 'react'
-import Calendarcomp from '../components/Calendarcomp.jsx'
+// import Calendarcomp from '../components/Calendarcomp.jsx'
 import DateRangeComp from '../components/DateRangeComp.jsx' 
-import DateRangePickerComp from '../components/DateRangePickerComp.jsx'
+// import DateRangePickerComp from '../components/DateRangePickerComp.jsx'
 
 const Datepicker = () => {
   return (
     <div className='App'>
-        <h4>Recat date Select</h4>
-        <Calendarcomp/>
+        <h4>date Select</h4>
+        {/* <Calendarcomp/> */}
         <br /><br />
         <hr />
 
-        <h4>Recat Date Range Select</h4>
+        <h4 className='text-center'>Selecciona tu turno</h4>
         <DateRangeComp/>
+        <input type="datetime-local" />
  
         <br /><br />
         <hr />
-
-        <h4>React range Date picker</h4>
-        <DateRangePickerComp/>
+        {/* <DateRangePickerComp/> */}
         
         </div>
         
