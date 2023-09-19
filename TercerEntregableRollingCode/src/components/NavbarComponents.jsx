@@ -6,7 +6,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink, redirect } from 'react-router-dom';
 import './css/NavbarComponents.css'
 import logo from "../components/img/logo.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {

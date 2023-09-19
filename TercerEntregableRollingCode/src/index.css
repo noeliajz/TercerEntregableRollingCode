@@ -135,7 +135,16 @@
   color: #206a5d;
 }
 
+
+.ButtonLogin {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .custom-image{
   width: 150px; 
   height: 150px;
 }
+
