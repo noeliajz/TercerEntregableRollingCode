@@ -21,9 +21,11 @@ const TabUsers = () => {
       }*/
     })
     const { allUsers } = await res.json()
-    console.log(res.json())
+    
     setUsers(allUsers)
+   
   }
+ 
 
   const deleteUser = async (id) => {
     const token = JSON.parse(localStorage.getItem('token'))
@@ -91,7 +93,7 @@ const TabUsers = () => {
         <th>ID</th>
         <th>NOMBRE USUARIO</th>
         <th>ROL</th>
-        <th><Link to={`/createUser`} className="btn btn-primary" style={{background:'#206A5D', color:'#F1F1E8'}} >CREAR USUARIO</Link></th>
+        <th><Link to={`/createUser`} className="btn btn-primary"  >CREAR USUARIO</Link></th>
       </tr>
     </thead>
     <tbody>

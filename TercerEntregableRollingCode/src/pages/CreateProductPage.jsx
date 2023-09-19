@@ -48,9 +48,9 @@ const CreateProductPage = () => {
           })
           
         })
-        const resCreateProd = await res.json()
+        
   
-        if (resCreateProd.status === 201) {
+        if (res.status === 201) {
                     
           Swal.fire(
             'Producto creado correctamente!',
