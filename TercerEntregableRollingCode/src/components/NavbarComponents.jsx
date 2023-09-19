@@ -36,8 +36,7 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
           <NavLink to="/planDesc " className=' fs-5 styleNavbar px-1'>Nuestros planes</NavLink>
           <NavLink to="/turn " className='  fs-5 styleNavbar px-1'>Solicitar turnos</NavLink> 
         </Nav>
-      </Navbar.Collapse>
-      <Nav className="ms-auto">
+        <Nav className="ms-auto">
         {
           !userAdmin ?
           <>
@@ -54,7 +53,9 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
           
         }
           
-          </Nav>
+      </Nav>
+      </Navbar.Collapse>
+      
     </Container>
   </Navbar>
       
