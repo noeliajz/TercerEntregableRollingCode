@@ -1,6 +1,4 @@
 import React from "react";
-import marcas from "../components/img/marcas.png";
-import marcass from "../components/img/marcass.png";
 
 const Carrusel = () => {
   return (
@@ -31,10 +29,10 @@ const Carrusel = () => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={marcas} className="d-block w-100" alt="Marca 1" />
+      <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/marcas.png.png" className="d-block w-100" alt="Marca 1" />
     </div>
     <div className="carousel-item">
-      <img src={marcass} className="d-block w-100" alt="Marca 2" />
+      <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/marcass_gh5ssu.png" className="d-block w-100" alt="Marca 2" />
     </div>
   </div>
   <button

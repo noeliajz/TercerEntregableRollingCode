@@ -1,8 +1,4 @@
 import React from "react";
-import gabri from "../components/img/gabri.png";
-import noe from "../components/img/noe.png";
-import lucas from "../components/img/lucas.png";
-import evelin from "../components/img/evelin.png";
 
 const SobreNosotros = () => {
   return (
@@ -12,23 +8,23 @@ const SobreNosotros = () => {
         <div className="row">
           <div className="col-6 col-md-3 text-center equipo">
             <img
-              src={gabri}
+              src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135575/proyecto/img/gabri.png.png"
               alt="Gabriela"
               className="img-fluid rounded-circle"
             />
             <p>Gabriela: Developer</p>
           </div>
           <div className="col-6 col-md-3 text-center equipo">
-            <img src={noe} alt="Noelia" className="img-fluid rounded-circle" />
+            <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135574/proyecto/img/noe.png.png" alt="Noelia" className="img-fluid rounded-circle" />
             <p>Noelia: Teach Lead</p>
           </div>
           <div className="col-6 col-md-3 text-center equipo">
-            <img src={lucas} alt="Lucas" className="img-fluid rounded-circle" />
+            <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695137130/proyecto/img/Lucas.png.jpg" alt="Lucas" className="img-fluid rounded-circle" />
             <p>Lucas: Developer</p>
           </div>
           <div className="col-6 col-md-3 text-center equipo">
             <img
-              src={evelin}
+              src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135574/proyecto/img/evelin.png.png"
               alt="Evelin"
               className="img-fluid rounded-circle"
             />

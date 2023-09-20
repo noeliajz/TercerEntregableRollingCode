@@ -2,13 +2,8 @@ import React, { useEffect, useState } from "react";
 import TabDailyDoc1 from "../components/TabDailyDoc1";
 import { FiArrowRight } from "react-icons/fi";
 import Carrusel from "../components/Carrusel";
-import michis from "../components/img/michis.png";
-import vetex from "../components/img/vetex.jpg";
-import vetee from "../components/img/vetee.png";
-import jon from "../components/img/jon.png";
-import ana from "../components/img/ana.png";
 import { Link } from "react-router-dom";
-// import WeatherApp from "../components/WeatherApp";
+import WeatherApp from "../components/WeatherApp";
 
 const Home = () => {
   return (
@@ -19,7 +14,7 @@ const Home = () => {
         </h1>
         <p className="welcome">Bienvenidos</p>
 
-        <img className="Perrosimg img-fluid" src={michis} alt="" />
+        <img className="Perrosimg img-fluid" src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135570/proyecto/img/michis.png.avif" alt="" />
       </div>
 
       <div className="container home-text-section text-center">
@@ -51,13 +46,13 @@ const Home = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="profesional">
-              <img src={vetee} alt="" className="img-fluid rounded-circle" />
+              <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135573/proyecto/img/vetee.png.png" alt="" className="img-fluid rounded-circle" />
               <p className="nombres">Rodrigo Lozano</p>
             </div>
           </div>
           <div className="col-md-6">
             <div className="profesional">
-              <img src={vetex} alt="" className="img-fluid rounded-circle" />
+              <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135573/proyecto/img/vetex.png.jpg" alt="" className="img-fluid rounded-circle" />
               <p className="nombres">Patricia Carello</p>
             </div>
           </div>
@@ -75,7 +70,7 @@ const Home = () => {
       <div className="col-md-6">
         <div className="testimonial">
           <img
-            src={jon}
+            src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/jon.png.jpg"
             alt=""
             className="img-fluid rounded-circle custom-image"
           />
@@ -88,7 +83,7 @@ const Home = () => {
       <div className="col-md-6">
         <div className="testimonial">
           <img
-            src={ana}
+            src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/ana.png.jpg"
             alt=""
             className="img-fluid rounded-circle custom-image"
           />
@@ -102,7 +97,7 @@ const Home = () => {
   </div>
 </div>
       </div>
-      {/* <WeatherApp /> */}
+      <WeatherApp />
     </>
 
 

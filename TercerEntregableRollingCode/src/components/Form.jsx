@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Swal from 'sweetalert2'
 
+
+const Form = () => {
+ 
 
 const Form = () => {
  
@@ -18,12 +20,18 @@ const Form = () => {
     setFormInputs({ ...formInputs, [name]: value });
   };
 
+
+
+  const handleSubmit = async () => {
+    if (formInputs.pass === formInputs.repeatPass) {
+
   
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     if (formInputs.pass === formInputs.repeatPass) {
      
+
       const res = await fetch("http://localhost:8080/api/users", {
         method: "POST",
         headers: {
@@ -36,6 +44,8 @@ const Form = () => {
           usuario: formInputs.user,
           contrasenia: formInputs.pass
         }),
+
+    
       
       });
       const data= await res.json()
@@ -46,6 +56,7 @@ const Form = () => {
           
         setTimeout(() => {location.href='/login'}, 3000)
       }}}
+
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -55,7 +66,9 @@ const Form = () => {
           <div className="form_container">
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail1" className="form-label">
+
                 Ingresar nombres
+
               </label>
               <input
                 type="text"
@@ -68,7 +81,9 @@ const Form = () => {
             </div>
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail2" className="form-label">
+
                 Ingresar apellidos
+
               </label>
               <input
                 type="text"
@@ -81,7 +96,9 @@ const Form = () => {
             </div>
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail3" className="form-label">
+
                Ingresar usuario
+
               </label>
               <input
                 type="text"
@@ -94,7 +111,9 @@ const Form = () => {
             </div>
             <div className=" mb-3">
               <label className="form_label" htmlFor="floatingInput4">
+
                 Ingresar contraseña
+
               </label>
               <input
                 type="password"
@@ -120,7 +139,9 @@ const Form = () => {
             </div>
             <div className=" mb-3">
               <label htmlFor="floatingPassword6" className="form_label">
+
                 Ingresar dirección
+
               </label>
               <input
                 type="text"

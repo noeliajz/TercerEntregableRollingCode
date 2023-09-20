@@ -5,18 +5,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink, redirect } from 'react-router-dom';
 import './css/NavbarComponents.css'
-import logo from "../components/img/logo.png";
+
 
 
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
- /* lo agregue martes */
- const token = JSON.parse(localStorage.getItem('token')) || ''
-/*  console.log(token)
- */ 
-const role = JSON.parse(localStorage.getItem('role')) || ''
- /* console.log(role)
  
- / / ... */
+ const token = JSON.parse(localStorage.getItem('token')) || ''
+
+const role = JSON.parse(localStorage.getItem('role')) || ''
+
 
   const logoutUserFunction = () => {
     setUserAdmin(false)
@@ -25,10 +22,13 @@ const role = JSON.parse(localStorage.getItem('role')) || ''
   return (
     <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar"  >
     <Container>
+ 
+
       <Navbar.Brand to={role === 'admin' ? '/adminPage' : role === 'user' ? '/user' : '/'} style={{color:' rgb(129, 178, 20)'}} >
             <img
+
               alt=""
-              src={logo}
+              src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/logo.png.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
