@@ -79,15 +79,15 @@ const TabProduct = () => {
     
     return (
         <>
-            <Table striped bordered hover>
-                <thead>
+            <Table striped bordered hover className='w-75'>
+                <thead className=''>
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre</th>
                         <th>Precio</th>
-                        <th>imagen</th>
+                        <th>Cantidad</th>
                         <th>
-                        <Link to={`/createProd`} className="btn btn-primary" style={{background:'#206A5D', color:'#F1F1E8'}} >AGREGAR PRODUCTO</Link></th>
+                        <Link to={`/createProd`} className="btn btn-primary"  >AGREGAR PRODUCTO</Link></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -97,7 +97,7 @@ const TabProduct = () => {
                                 <td>{product.codigo}</td>
                                 <td>{product.nombre}</td>
                                 <td>{product.precio}</td>
-                                <td><img src={product.img}/></td>
+                                <td>{product.imagen}</td>
                                 <td>
                                 <div><button className='btn btn-danger'onClick={() => deleteProduct(product._id)}>Eliminar</button>
                                 <Link to={`/editProduct/${product._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link> </div>

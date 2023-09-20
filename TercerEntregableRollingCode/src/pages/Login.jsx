@@ -29,7 +29,7 @@ const Login = () => {
           },
           body: JSON.stringify({
             usuario: formInputs.user,
-            contraseña: formInputs.pass
+            contrasenia: formInputs.pass
           })
         })
 

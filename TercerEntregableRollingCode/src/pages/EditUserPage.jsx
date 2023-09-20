@@ -8,11 +8,12 @@ const EditUserPage = () => {
     const [inputCheckName, setInputCheckName] = useState(false)
     const [formValues, setFormValues] = useState({
       name: '',
+      familyName:'',
       userName: '',
       role: ''
     })
   
-    const getProduct = async () => {
+    const getOneUser = async () => {
       const token = JSON.parse(localStorage.getItem('token'))
   
       const res = await fetch(`http://localhost:8080/api/users/${params.id}`, {
@@ -26,6 +27,7 @@ const EditUserPage = () => {
       const { getUser } = await res.json()
       setFormValues({
         name: getUser.nombre,
+        familyName: getUser.apellido,
         userName: getUser.usuario,
         role: getUser.role
       })
@@ -59,6 +61,7 @@ const EditUserPage = () => {
           },
           body: JSON.stringify({
             nombre: formValues.name,
+            apellido: formValues.familyName,
             usuario: formValues.userName,
             role: formValues.role
           })
@@ -72,6 +75,7 @@ const EditUserPage = () => {
         }
         setFormValues({
           name: '',
+          familyName:'',
           userName: '',
           role: ''
         })
@@ -83,24 +87,29 @@ const EditUserPage = () => {
     }
   
     useEffect(() => {
-      getProduct()
+      getOneUser()
     }, [])
   
   
     return (
       <>
-      <div className="conteiner w-50" style={{ marginTop: "200px"}}>
+      <div className="conteiner w-100 d-flex justify-content-center mb-5" style={{ marginTop: "100px"}}>
+        
         <form>
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label">Nombre</label>
-            <input type="text" name='name' value={formValues.name} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
+            <input type="text" name='name' value={formValues.name}  className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">Precio</label>
+            <label for="exampleInputEmail1" className="form-label">Apellido</label>
+            <input type="text" name='familyName' value={formValues.familyName}  className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label for="exampleInputPassword1" className="form-label">Mail</label>
             <input type="text" name='userName' value={formValues.userName} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputPassword1" onChange={handleChange} />
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">Codigo</label>
+            <label for="exampleInputPassword1" className="form-label">Rol</label>
             <input type="text" name='role' value={formValues.role} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputPassword1" onChange={handleChange} />
           </div>
   
