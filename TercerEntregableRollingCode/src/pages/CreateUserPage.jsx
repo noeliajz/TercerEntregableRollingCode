@@ -24,6 +24,7 @@ const CreateUserPage = () => {
   
     const handleClick = async (ev) => {
       ev.preventDefault()
+      const token = JSON.parse(localStorage.getItem('token'))
       if (formValues.name === '' || formValues.familyName === '' || formValues.mail=== '' || formValues.address === '' || formValues.pass === ''  || formValues.rpass === '') {
         Swal.fire({
           icon: 'error',
@@ -45,7 +46,8 @@ const CreateUserPage = () => {
         const res = await fetch(`http://localhost:8080/api/users`, {
           method: 'POST',
          headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${token}`
           },
           body: JSON.stringify({
             nombre: formValues.name,

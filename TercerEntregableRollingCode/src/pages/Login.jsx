@@ -28,8 +28,8 @@ const Login = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            usuario: formInputs.user
-            contraseña: formInputs.pass
+            usuario: formInputs.user,
+            contrasenia: formInputs.pass
           })
         })
 

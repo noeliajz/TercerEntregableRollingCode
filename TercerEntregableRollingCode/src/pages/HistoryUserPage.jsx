@@ -35,8 +35,8 @@ const HistoryUserPage = () => {
             >
              
               <div className="card-body">
-                <h5 className="card-title">USUARIO:</h5>
-                <p className="card-text">NOMBRE Y APELLIDO: {user.nombre}{user.apellido}</p>
+                <h5 className="card-title">USUARIO</h5>
+                <p className="card-text">NOMBRE Y APELLIDO: {user.nombre} {user.apellido}</p>
                 <p className="card-text">EMAIL: {user.usuario}</p>
                 <p className="card-text">
                   DIRECCION: {user.direccion}
@@ -64,7 +64,7 @@ const HistoryUserPage = () => {
             >
              
               <div className="card-body">
-                <h5 className="card-title">MASCOTA:</h5>
+                <h5 className="card-title">MASCOTA</h5>
                 <p className="card-text">NOMBRE: </p>
                 <p className="card-text">ESPECIE: </p>
                 <p className="card-text">

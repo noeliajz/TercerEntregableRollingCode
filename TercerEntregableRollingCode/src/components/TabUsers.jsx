@@ -15,10 +15,10 @@ const TabUsers = () => {
 
     const res = await fetch('http://localhost:8080/api/users', {
       method:'GET',
-      /*headers:{
+      headers:{
         'content-type':'application/json',
         'authorization': `Bearer ${token}` 
-      }*/
+      }
     })
     const { allUsers } = await res.json()
     

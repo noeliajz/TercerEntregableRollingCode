@@ -5,7 +5,7 @@ import TabUsers from '../components/TabUsers'
 const UserAdminPage = () => {
   return (
     <>
-        <div className="conteiner d-flex"style={{ marginTop: "75px"}}>
+        <div className="conteiner d-flex"style={{ marginTop: "55px"}}>
       <div className="column w-25">
       <AdminNavigate/>
       </div>

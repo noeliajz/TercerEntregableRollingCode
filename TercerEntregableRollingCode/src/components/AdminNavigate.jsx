@@ -8,8 +8,8 @@ const AdminNavigate = () => {
   return (
     <Container >
     <Row >
-      <Col className="bg-dark text-white">
-        <Nav style={{ marginTop: "50px"}} defaultActiveKey="/" className="flex-column">
+      <Col className="bg-dark text-white vh-100">
+        <Nav style={{ marginTop: "50px"}} defaultActiveKey="/" className="flex-column justify-content-center align-content-center ">
           <Nav.Link href="/adminPage">HOME</Nav.Link>
           <Nav.Link href="/ProductAdmin" eventKey="link-1">PRODUCTOS</Nav.Link>
           <Nav.Link href="/UserAdmin" eventKey="link-2">USUARIOS</Nav.Link>

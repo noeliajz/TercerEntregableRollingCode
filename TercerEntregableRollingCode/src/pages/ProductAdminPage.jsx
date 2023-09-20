@@ -7,12 +7,12 @@ const ProductAdminPage = () => {
     <>
     
     
-    <div className="conteiner d-flex"style={{ marginTop: "75px"}}>
-      <div className="column w-25">
+    <div className="conteiner d-flex "style={{ marginTop: "55px"}}>
+      <div className="column w-25 bg-dark">
       <AdminNavigate/>
       </div>
      
-      <div className="column  w-100">
+      <div className="flex-wrap column ustify-content-center d-flex w-100">
       <TabProduct/>
       </div>
         
