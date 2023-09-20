@@ -17,14 +17,9 @@ const OneProduct = () => {
   }, []);
   return (
     <>
-      <div className="container paddingOneProduct  pb-5">
-        <div className="row ">
+      <div className="  container text-center paddingOneProduct  pb-5">
+        <div className="row justify-content-center ">
           <div className="col ">
-            {/* <div key={product?._id}>
-          <h4>{product?.nombre}</h4>
-          <h4>{product?.precio}</h4>
-          <h4>{product?.codigo}</h4> */}
-
             <div
               key={product._id}
               className="card  text-center "
