@@ -61,7 +61,6 @@ const role = JSON.parse(localStorage.getItem('role')) || ''
             token && role === 'admin' || token && role === 'user'
             ?
             <>
-             <NavLink to="/shopingCart " className=' fs-5 styleNavbar px-1'>Carrito</NavLink>
             <NavLink to="/login" className=' fs-5 styleNavbar px-1' onClick={() => logoutUserFunction()}>Cerrar sesión</NavLink>
             </>
             :
