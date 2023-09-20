@@ -6,6 +6,8 @@ const CardsAllProducts = ({array}) => {
   /* carrito */
   const handleClick= async (id) =>{
     const idUser = JSON.parse(localStorage.getItem('idUser'))
+    const token = JSON.parse(localStorage.getItem('token'))
+    
     console.log(idUser)
     const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCartUser = await resCartUser.json()
@@ -14,7 +16,8 @@ const CardsAllProducts = ({array}) => {
     const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}/${id}`, {
       method: 'POST',
       headers: {
-        "content-type":"application/json"
+        "content-type":"application/json",
+        'authorization': `Bearer ${token}`
       }
     })    
     const dataProd = await resProd.json()
