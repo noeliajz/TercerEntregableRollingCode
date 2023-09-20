@@ -21,6 +21,10 @@ import EditProductPage from '../pages/EditProductPage'
 import CreateProductPage from '../pages/CreateProductPage'
 import CreateUserPage from '../pages/CreateUserPage'
 import EditUserPage from '../pages/EditUserPage'
+import ProductAdminPage from '../pages/ProductAdminPage'
+import UserAdminPage from '../pages/UserAdminPage'
+import DailyPage from '../pages/DailyPage'
+import HistoryUserPage from '../pages/HistoryUserPage'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -45,6 +49,10 @@ const RoutesView = ({setUserAdmin}) => {
         <Route path='/createProd' element={<CreateProductPage />} />
         <Route path='/createUser' element={<CreateUserPage />} />
         <Route path='/editUser/:id' element={<EditUserPage />} />
+        <Route path='/ProductAdmin' element={<ProductAdminPage />} />
+        <Route path='/UserAdmin' element={<UserAdminPage />} />
+        <Route path='/DailyAdmin' element={<DailyPage />} />
+        <Route path='/HistoryUserPage/:id' element={<HistoryUserPage />} />
     </Routes>
   )
 }

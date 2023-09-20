@@ -24,7 +24,8 @@ const CreateUserPage = () => {
   
     const handleClick = async (ev) => {
       ev.preventDefault()
-      if (formValues.name === '' && formValues.familyName === '' && formValues.mail=== '' && formValues.formValues.address === '' && formValues.pass === ''  && formValues.rpass === '') {
+      const token = JSON.parse(localStorage.getItem('token'))
+      if (formValues.name === '' || formValues.familyName === '' || formValues.mail=== '' || formValues.address === '' || formValues.pass === ''  || formValues.rpass === '') {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
@@ -45,7 +46,8 @@ const CreateUserPage = () => {
         const res = await fetch(`http://localhost:8080/api/users`, {
           method: 'POST',
          headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'authorization': `Bearer ${token}`
           },
           body: JSON.stringify({
             nombre: formValues.name,
@@ -53,15 +55,14 @@ const CreateUserPage = () => {
             direccion: formValues.address,
             usuario:formValues.mail,           
             contrasenia: formValues.pass,
-            //role: formValues.role
+            role: formValues.role
             
           })
           
         })
+        console.log(res.json())
         
-        const resCreateProd = await res.json()
-  
-        if (resCreateProd.status === 201) {
+        if (res.status === 201) {
           
   
           Swal.fire(
@@ -79,7 +80,7 @@ const CreateUserPage = () => {
           })
   
          setTimeout(() => {
-          navigate('/adminUsers')
+          navigate('/adminPage')
          }, 1000);
         }
       }
@@ -87,7 +88,7 @@ const CreateUserPage = () => {
   
     return (
       <>
-      <div className='d-flex justify-content-center' style={{ marginTop: "100px"}}>
+      <div className='d-flex justify-content-center mb-5' style={{ marginTop: "100px"}}>
       <form className='w-25'>
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label">Nombre</label>
