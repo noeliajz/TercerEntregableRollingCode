@@ -38,7 +38,8 @@ const Login = () => {
           localStorage.setItem('token',data.userUpdate.token )
           localStorage.setItem('role',data.userUpdate.role )
         
-          navigate ('/admin')}
+        navigate ('/admin')
+        }
         else if (data.userUpdate.role=== 'user'){
           localStorage.setItem('token',data.userUpdate.token )
           localStorage.setItem('role',data.userUpdate.role )
