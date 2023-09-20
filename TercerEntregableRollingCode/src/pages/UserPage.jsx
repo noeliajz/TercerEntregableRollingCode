@@ -40,7 +40,7 @@ const getAllProducts = async () => {
             <PlanDescription />
           </div>
 
-          <div className=" d-flex justify-content-center " style={{ margin: '50px' }}>
+          <div className=" text-center " >
             <h1>PRODUCTOS DESTACADOS DEL MES</h1>
           </div>
           <div className="conteiner " >

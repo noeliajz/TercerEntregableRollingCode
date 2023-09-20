@@ -5,10 +5,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink, redirect } from 'react-router-dom';
 import './css/NavbarComponents.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
+ 
+ const token = JSON.parse(localStorage.getItem('token')) || ''
+
+const role = JSON.parse(localStorage.getItem('role')) || ''
+
+
   const logoutUserFunction = () => {
     setUserAdmin(false)
     location.href='/'
@@ -16,8 +22,11 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
   return (
     <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar"  >
     <Container>
-      <Navbar.Brand href="/" style={{color:' rgb(129, 178, 20)'}} >
-            <img 
+ 
+
+      <Navbar.Brand to={role === 'admin' ? '/adminPage' : role === 'user' ? '/user' : '/'} style={{color:' rgb(129, 178, 20)'}} >
+            <img
+
               alt=""
               src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/logo.png.png"
               width="30"
@@ -30,30 +39,47 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto ">
-          <NavLink to="/" className=' fs-5 styleNavbar px-1 ' >Inicio</NavLink>
-          <NavLink to="/sobrenosotros " className='  fs-5 styleNavbar px-1'>Sobre nosotros</NavLink>
-          <NavLink to="/planDesc " className=' fs-5 styleNavbar px-1'>Nuestros planes</NavLink>
-          <NavLink to="/turn " className='  fs-5 styleNavbar px-1'>Solicitar turnos</NavLink> 
-        </Nav>
-      </Navbar.Collapse>
-      <Nav className="ms-auto">
-        {
-          !userAdmin ?
-          <>
+       {/* esto cambie MARTES */}   <NavLink to={role === 'admin' ? '/adminPage' : role === 'user' ? '/user' : '/'} className=' fs-5 styleNavbar px-1 ' >Inicio</NavLink>
+
+
+       {/* esto agregue MARTES para que no me los muestre cuando este logueado: */}
+           {
+            token && role === 'admin'
+            ?
+            (
+              <>
+              <NavLink to="/sobrenosotros " className='  fs-5 styleNavbar px-1'>Crear usuarios</NavLink>
+              <NavLink to="/planDesc " className=' fs-5 styleNavbar px-1'>Crear productos</NavLink>
+              </>
+            )
+            :
+            <>
+             <NavLink to="/sobrenosotros " className='  fs-5 styleNavbar px-1'>Sobre nosotros</NavLink>
+             <NavLink to="/planDesc " className=' fs-5 styleNavbar px-1'>Nuestros planes</NavLink>
+             <NavLink to="/turn " className='  fs-5 styleNavbar px-1'>Solicitar turnos</NavLink> 
+
+            </>
+           }
+          {
+            token && role === 'admin' || token && role === 'user'
+            ?
+            <>
+             <NavLink to="/shopingCart " className=' fs-5 styleNavbar px-1'>Carrito</NavLink>
+            <NavLink to="/login" className=' fs-5 styleNavbar px-1' onClick={() => logoutUserFunction()}>Cerrar sesión</NavLink>
+            </>
+            :
+            <>
             <NavLink to="/register " className=' fs-5 styleNavbar px-1'>Registrarse</NavLink>
             <NavLink to="/login " className=' fs-5 styleNavbar px-1'>Iniciar sesión</NavLink>
-          </>
-          :
-          <>
-          <NavLink to="/shopingCart " className=' fs-5 styleNavbar px-1'>Carrito</NavLink>
-          <FontAwesomeIcon icon="fa-brands fa-twitter" />
-          <NavLink to="/login" className=' fs-5 styleNavbar px-1' onClick={() => logoutUserFunction()}>Cerrar sesión</NavLink>
+            </>
+          }
+         
 
-          </>
-          
-        }
-          
-          </Nav>
+       {/* ................................... */}   
+        </Nav>
+        
+      </Navbar.Collapse>
+      
     </Container>
   </Navbar>
       

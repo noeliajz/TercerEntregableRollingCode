@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const Form = () => {
-  /* const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
-  const [repeatPass, setRepeatPass] = useState(""); */
-  /* const [name, setName] = useState('')
-const [lastname, setLastname] = useState('')
-const [addess, setAddress] = useState('') */
 
+const Form = () => {
+ 
+
+const Form = () => {
+ 
   const [formInputs, setFormInputs] = useState({
     user: "",
     pass: "",
@@ -22,13 +20,18 @@ const [addess, setAddress] = useState('') */
     setFormInputs({ ...formInputs, [name]: value });
   };
 
-  /* useEffect(() => {
-    console.log(formInputs)
-}, [formInputs])
- */
+
 
   const handleSubmit = async () => {
     if (formInputs.pass === formInputs.repeatPass) {
+
+  
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    if (formInputs.pass === formInputs.repeatPass) {
+     
+
       const res = await fetch("http://localhost:8080/api/users", {
         method: "POST",
         headers: {
@@ -41,14 +44,19 @@ const [addess, setAddress] = useState('') */
           usuario: formInputs.user,
           contrasenia: formInputs.pass
         }),
-      });
-      console.log(res.json());
-      prompt("pruea")
 
-      /*         const data= await res.json()
-       */ console.log(data);
-    }
-  };
+    
+      
+      });
+      const data= await res.json()
+      console.log(data)
+      if(data.status === 201)
+      {
+        alert("registro exitoso")
+          
+        setTimeout(() => {location.href='/login'}, 3000)
+      }}}
+
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -58,7 +66,9 @@ const [addess, setAddress] = useState('') */
           <div className="form_container">
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail1" className="form-label">
-                Nombre
+
+                Ingresar nombres
+
               </label>
               <input
                 type="text"
@@ -71,7 +81,9 @@ const [addess, setAddress] = useState('') */
             </div>
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail2" className="form-label">
-                Apellido
+
+                Ingresar apellidos
+
               </label>
               <input
                 type="text"
@@ -84,7 +96,9 @@ const [addess, setAddress] = useState('') */
             </div>
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail3" className="form-label">
-                Usuario
+
+               Ingresar usuario
+
               </label>
               <input
                 type="text"
@@ -97,7 +111,9 @@ const [addess, setAddress] = useState('') */
             </div>
             <div className=" mb-3">
               <label className="form_label" htmlFor="floatingInput4">
-                Contraseña
+
+                Ingresar contraseña
+
               </label>
               <input
                 type="password"
@@ -123,7 +139,9 @@ const [addess, setAddress] = useState('') */
             </div>
             <div className=" mb-3">
               <label htmlFor="floatingPassword6" className="form_label">
-                Dirección
+
+                Ingresar dirección
+
               </label>
               <input
                 type="text"
