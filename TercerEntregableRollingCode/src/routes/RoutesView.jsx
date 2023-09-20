@@ -53,6 +53,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route path='/UserAdmin' element={<UserAdminPage />} />
         <Route path='/DailyAdmin' element={<DailyPage />} />
         <Route path='/HistoryUserPage/:id' element={<HistoryUserPage />} />
+        <Route path='/Datepicker' element={<Datepicker />} />
+
     </Routes>
   )
 }

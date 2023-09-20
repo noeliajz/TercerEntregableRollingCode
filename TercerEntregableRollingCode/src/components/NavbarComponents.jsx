@@ -59,7 +59,8 @@ const role = JSON.parse(localStorage.getItem('role')) || ''
              <NavLink to="/turn " className='  fs-5 styleNavbar px-1'>Solicitar turnos</NavLink> 
 
             </>
-           }
+           } </Nav>
+              <Nav className="me-auto ">
           {
             token && role === 'admin' || token && role === 'user'
             ?
