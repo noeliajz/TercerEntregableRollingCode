@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Swal from 'sweetalert2'
+
 
 const Form = () => {
  
@@ -38,11 +40,12 @@ const Form = () => {
       });
       const data= await res.json()
       console.log(data)
-      if(data.status === 201){
+      if(data.status === 201)
+      {
         alert("registro exitoso")
-      }
-    }
-  };
+          
+        setTimeout(() => {location.href='/login'}, 3000)
+      }}}
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -52,7 +55,7 @@ const Form = () => {
           <div className="form_container">
             <div className=" mb-3">
               <label htmlFor="exempleInputEmail1" className="form-label">
-                Ingresar nombre
+                Ingresar nombres
               </label>
               <input
                 type="text"
