@@ -9,7 +9,7 @@ import Turn from '../pages/Turn'
 import UserPage from '../pages/UserPage'
 import {Routes, Route} from 'react-router-dom'
 import AllProducts from '../pages/AllProducts'
-import Register from '../pages/Register'
+import Register2 from '../pages/Register2'
 import Login from '../pages/Login'
 import OneProduct from '../pages/OneProduct'
 import SobreNosotros from '../pages/SobreNosotros'
@@ -35,7 +35,7 @@ const RoutesView = ({setUserAdmin}) => {
         <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
         <Route  path='/allproducts' element={<AllProducts/>}/>
         <Route  path='/sobrenosotros' element={<SobreNosotros/>}/>
-        <Route  path='/register' element={<Register/>}/>
+        <Route  path='/register' element={<Register2/>}/>
         <Route  path='/login' element={<Login/>}/>
         <Route  path='/firstplan' element={<FirstPlan/>}/>
         <Route  path='/secondplan' element={<SecondPlan/>}/>
