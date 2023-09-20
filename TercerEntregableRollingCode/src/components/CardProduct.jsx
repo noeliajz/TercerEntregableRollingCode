@@ -22,7 +22,6 @@ const CardProduct = () => {
             <button className='btn btn-outline-success' onClick={() => handleClick(articulo._id)}>Agregar Carrito</button>
           </div>
         </div>
-
       )
     }
   </>

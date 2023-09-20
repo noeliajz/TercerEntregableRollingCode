@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const CardsAllProducts = ({array}) => {
-  /* carrito */
   const handleClick= async (id) =>{
     const idUser = JSON.parse(localStorage.getItem('idUser'))
     const token = JSON.parse(localStorage.getItem('token'))
@@ -11,7 +10,6 @@ const CardsAllProducts = ({array}) => {
     console.log(idUser)
     const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCartUser = await resCartUser.json()
-
     const idCart = dataCartUser.getUser.idCart
     const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}/${id}`, {
       method: 'POST',
@@ -22,7 +20,6 @@ const CardsAllProducts = ({array}) => {
     })    
     const dataProd = await resProd.json()
     if(dataProd.status === 400){
-      /* libreria de sweetalert */
       Swal.fire({
         title: dataProd.msg,
         width: 600,
@@ -40,13 +37,12 @@ const CardsAllProducts = ({array}) => {
       Swal.fire({
         position: 'top-end',
         icon: 'success',
-        /* title: 'Producto agregado al carrito', */
         text: dataProd.msg,
         showConfirmButton: false,
         timer: 1500
       })
     }
-      /* -- */
+     
    
   }
 

@@ -148,3 +148,51 @@
   height: 150px;
 }
 
+.containerWea {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 100vh; /* Hace que el contenedor ocupe al menos el 100% del alto de la ventana */
+}
+
+.calendarWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.testimonial-section-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.work-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: left;
+}
+
+.testimonial-section-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
