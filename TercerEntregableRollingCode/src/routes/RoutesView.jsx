@@ -25,6 +25,7 @@ import ProductAdminPage from '../pages/ProductAdminPage'
 import UserAdminPage from '../pages/UserAdminPage'
 import DailyPage from '../pages/DailyPage'
 import HistoryUserPage from '../pages/HistoryUserPage'
+import Error404 from '../pages/Error404'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -53,6 +54,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route path='/UserAdmin' element={<UserAdminPage />} />
         <Route path='/DailyAdmin' element={<DailyPage />} />
         <Route path='/HistoryUserPage/:id' element={<HistoryUserPage />} />
+        <Route path='/Error404' element={<Error404/>} />
+
     </Routes>
   )
 }
