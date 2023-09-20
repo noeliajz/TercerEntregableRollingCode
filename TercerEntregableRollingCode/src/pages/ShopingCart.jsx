@@ -6,14 +6,28 @@ import Table from 'react-bootstrap/Table';
 const ShopingCart = () => {
   const [cart, setCart] = useState([])
   const getCartUser = async () => {
+    const token = JSON.parse(localStorage.getItem('token'))
     const idUser = JSON.parse(localStorage.getItem('idUser'))
+    
    console.log(idUser)
-    const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`)
+    const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`, {
+      method:'GET',
+      headers:{
+        'content-type':'application/json',
+        'authorization': `Bearer ${token}` 
+      }
+    })
     const dataCartUser = await resCartUser.json()
     console.log(dataCartUser.getUser.idCart)
 
     const idCart = dataCartUser.getUser.idCart
-    const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}`)
+    const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}`, {
+      method:'GET',
+      headers:{
+        'content-type':'application/json',
+        'authorization': `Bearer ${token}` 
+      }
+    })
     const dataProd = await resProd.json()
     /*      console.log(dataProd.getCartUser.products)    
      */

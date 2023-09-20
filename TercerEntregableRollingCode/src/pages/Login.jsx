@@ -1,29 +1,36 @@
-import React, { useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
-import Swal from "sweetalert2";
-import Axios from "axios";
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-  const navigate = useNavigate
-  const [formValue, setFormValue] = useState({
-    user: " ",
-    pass: " ",
-  });
+  const navigate = useNavigate()
+  const [formInputs, setFormInputs] = useState({
+    user: '',
+    pass: ''
+  })
+
+  const [userInput, setUserInput] = useState(false)
+  const [passInput, setPassInput] = useState(false)
 
   const handleChange = (ev) => {
-    setFormValue({ ...formValue, [ev.target.name]: ev.target.value });
-  };
+    setFormInputs({ ...formInputs, [ev.target.name]: ev.target.value })
+
+    if (formInputs.user) {
+      setUserInput(false)
+    } else if (formInputs.pass) {
+      setPassInput(false)
+    }
+  }
 
   const handleClick = async (ev) => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user.pass === formValue.pass) {
-      user.role === "admin"
-        ? (location.href = "/admin")
-        : (location.href = "/user");
+    ev.preventDefault()
+    if (formInputs.user) {
+      if (formInputs.pass) {
+        setUserInput(false)
+        setPassInput(false)
+        
 
-        const res = await fetch ('http://localhost:8080/api/users/login', {
-          method: 'POST' ,
+        const res = await fetch('http://localhost:8080/api/users/login', {
+          method: 'POST',
           headers: {
             "Content-Type": "application/json",
           },
@@ -33,82 +40,51 @@ const Login = () => {
           })
         })
 
-        const data = await res.json ()
-        if(data.userUpdate.role=== 'admin') {
-          localStorage.setItem('token',data.userUpdate.token )
-          localStorage.setItem('role',data.userUpdate.role )
+        const data = await res.json()
         
-          navigate ('/admin')}
-        else if (data.userUpdate.role=== 'user'){
-          localStorage.setItem('token',data.userUpdate.token )
-          localStorage.setItem('role',data.userUpdate.role )
-
-          navigate ('/user')
+        if (data.userUpdate.role === 'admin') {
+          localStorage.setItem('token', JSON.stringify(data.userUpdate.token))
+          localStorage.setItem('role', JSON.stringify(data.userUpdate.role))
+          localStorage.setItem('idUser', JSON.stringify(data.userUpdate._id))
+          localStorage.setItem('nombre', JSON.stringify(data.userUpdate.nombre))
+          navigate('/adminPage')
+        } else if (data.userUpdate.role === 'user') {
+          localStorage.setItem('token', JSON.stringify(data.userUpdate.token))
+          localStorage.setItem('role', JSON.stringify(data.userUpdate.role))
+          localStorage.setItem('idUser', JSON.stringify(data.userUpdate._id))
+          navigate('/user')
         }
 
-        
-
-
+      }
     } else {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Contraseña incorrecta",
-      });
+      setUserInput(true)
+      setPassInput(true)
     }
-  };
+  }
+
+  useEffect(() => {
+    console.log(formInputs)
+  }, [formInputs])
+
 
   return (
     <>
-      <body className="colorLogin  ">
-        <Container>
-          <Row>
-            <Col>
-              <Form className=" Login pb-4 text-center display-flex justify-content-center">
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>Usuario</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="user"
-                    onChange={handleChange}
-                    placeholder="Ingresar Usuario"
-                  />
-                </Form.Group>
-
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>Contraseña</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="pass"
-                    onChange={handleChange}
-                    placeholder="Ingresar Contraseña"
-                  />
-                </Form.Group>
-                <Button onClick={handleClick} className="ButtonLogin ">
-                  Iniciar Sesión
-                </Button>
-                <Button onClick={handleClick} className="ButtonLogin ">
-                  Iniciar con Facebook
-                </Button>
-                <Button onClick={handleClick} className="ButtonLogin ">
-                  Iniciar con Gmail
-                </Button>
-                <Button onClick={handleClick} className="ButtonLogin ">
-                  Recuperar Contraseña
-                </Button>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
-      </body>
+      <h2 className='py-3 text-center'>Iniciar sesion</h2>
+      <div className='d-flex justify-content-center'>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input type="text" name='user' class={userInput ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" name='pass' class={passInput ? 'form-control is-invalid' : 'form-control'} id="exampleInputPassword1" onChange={handleChange} />
+          </div>
+          <button type="submit" class="btn btn-primary my-3" onClick={handleClick}>Iniciar Sesion</button>
+        </form>
+      </div>
     </>
   );
-};
+}
 
-export default Login;
+export default Login
