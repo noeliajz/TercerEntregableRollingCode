@@ -1,7 +1,7 @@
 import React from 'react'
 import  Form from '../components/Form'
 
-const Register2 = () => {
+const Register = () => {
   return (
     <>
     <Form/>
@@ -10,4 +10,4 @@ const Register2 = () => {
   )
 }
 
-export default Register2
+export default Register
