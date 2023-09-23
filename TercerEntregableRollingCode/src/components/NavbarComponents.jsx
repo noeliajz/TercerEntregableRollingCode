@@ -25,7 +25,7 @@ const role = JSON.parse(localStorage.getItem('role')) || ''
   return (
     <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar"  >
     <Container>
-      <Navbar.Brand to={role === 'admin' ? '/adminPage' : role === 'user' ? '/user' : '/'} style={{color:' rgb(129, 178, 20)'}} >
+      <Navbar.Brand to='/' style={{color:' rgb(129, 178, 20)'}} >
             <img
               alt=""
               src={logo}
