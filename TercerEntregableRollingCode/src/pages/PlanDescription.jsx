@@ -10,7 +10,7 @@ import { FiArrowRight } from "react-icons/fi";
 const PlanDescription = () => {
   return (
     <>
-    <body className="PlanDescription">
+    <main className="PlanDescription">
     <h2 className="paddingTitle text-center">
         Conoce todos nuestros a planes!!
       </h2>
@@ -58,7 +58,7 @@ const PlanDescription = () => {
           </Col>
         </Row>
       </Container>
-    </body>
+    </main>
     
     </>
   );

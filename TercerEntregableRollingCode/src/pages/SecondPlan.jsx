@@ -9,7 +9,7 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 const SecondPlan = () => {
     return (
         <>
-          <body className="FirstPlan">
+          <main className="FirstPlan">
             <h2 className="paddingTitle text-center fs-1">Plan Madurando</h2>
             <Container fluid>
               <Row className=" py-3 justify-content-between fs-5">
@@ -42,7 +42,7 @@ const SecondPlan = () => {
                 </Col>
               </Row>
             </Container>
-          </body>
+          </main>
         </>
       );
 }
