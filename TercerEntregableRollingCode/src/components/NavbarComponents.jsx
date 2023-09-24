@@ -69,12 +69,13 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
                 <NavLink to="/planDesc " className=" fs-5 styleNavbar px-1">
                   Nuestros planes
                 </NavLink>
-                <NavLink to="/turn " className="  fs-5 styleNavbar px-1">
-                  Solicitar turnos
-                </NavLink>
                 <NavLink to="/shopingCart" className="  fs-5 styleNavbar px-1">
                 <HiShoppingCart/>Mi carrito
                 </NavLink>
+                <NavLink to="/turn " className="  fs-5 styleNavbar px-1">
+                  Solicitar turnos
+                </NavLink>
+                
               </>
             )}
           </Nav>
