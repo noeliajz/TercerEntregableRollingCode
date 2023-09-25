@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const CardsAllProducts = ({array}) => {
+  
   const handleClick= async (id) =>{
     const idUser = JSON.parse(localStorage.getItem('idUser'))
     const token = JSON.parse(localStorage.getItem('token'))
@@ -10,7 +11,11 @@ const CardsAllProducts = ({array}) => {
     console.log(idUser)
     const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCartUser = await resCartUser.json()
+    console.log(dataCartUser)
+    
+    console.log(id)
     const idCart = dataCartUser.getUser.idCart
+    console.log(idCart)
     const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}/${id}`, {
       method: 'POST',
       headers: {
