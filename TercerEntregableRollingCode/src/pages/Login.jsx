@@ -49,13 +49,17 @@ const Login = () => {
             "nombre",
             JSON.stringify(data.userUpdate.nombre)
           );
-          location.href = "/adminPage";
+/*           location.href = "/adminPage";
+ */          
+         navigate('/adminPage')
         } else if (data.userUpdate.role === "user") {
           localStorage.setItem("token", JSON.stringify(data.userUpdate.token));
           localStorage.setItem("role", JSON.stringify(data.userUpdate.role));
           localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id));
-          location.href = "/user";
-        }
+/*           location.href = "/user";
+ */       
+          navigate('/user')
+      }
       }
     } else {
       setUserInput(true);

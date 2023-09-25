@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const CardsAllProducts = ({array}) => {
+  
   const handleClick= async (id) =>{
     const idUser = JSON.parse(localStorage.getItem('idUser'))
     const token = JSON.parse(localStorage.getItem('token'))
