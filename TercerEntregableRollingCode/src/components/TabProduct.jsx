@@ -79,7 +79,7 @@ const TabProduct = () => {
     
     return (
         <>
-            <Table striped bordered hover className='w-75'>
+            <Table responsive striped bordered hover className=' w-75'>
                 <thead className=''>
                     <tr>
                         <th>Codigo</th>

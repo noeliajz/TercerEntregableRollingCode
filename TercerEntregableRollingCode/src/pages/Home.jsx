@@ -10,15 +10,14 @@ const Home = () => {
     <>
       <div className="container contenedor-princi paddingHome text-center">
         <h1 className="titulo-princi">
-          Veterinaria <hr /> King Pet
+          Veterinaria<hr /> King Pet
         </h1>
-        <p className="welcome">Bienvenidos</p>
 
         <img className="Perrosimg img-fluid" src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135570/proyecto/img/michis.png.avif" alt="" />
       </div>
 
       <div className="container home-text-section text-center">
-        <h1 className="primary-heading">Conoce nuestros planes</h1>
+        <h1 className="primary-heading text-center">Conoce nuestros planes</h1>
 
         <div className="primary-text p-3">
 
@@ -41,7 +40,7 @@ const Home = () => {
 
       <div className="container text-center about-section-container">
         <h1 className="primary-heading">
-          Conoce a los profesionales de nuestra Clínica1
+          Conoce a los profesionales de nuestra Clínica
         </h1>
         <div className="row">
           <div className="col-md-6">
@@ -99,9 +98,6 @@ const Home = () => {
       </div>
       <WeatherApp />
     </>
-
-
-
 );
 };
 

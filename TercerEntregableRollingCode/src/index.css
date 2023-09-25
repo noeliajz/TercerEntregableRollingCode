@@ -178,3 +178,24 @@
   align-items: center;
   height: 100vh;
 }
+.testimonial-section-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.work-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: left;
+}
+
+.testimonial-section-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.colorTitleNavbar{
+  color:  rgb(129, 178, 20);
+}

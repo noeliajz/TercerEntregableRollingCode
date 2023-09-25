@@ -82,7 +82,7 @@ const EditUserPage = () => {
   
         setTimeout(() => {
           navigate('/adminPage')
-        }, 1500);
+        }, 1000);
       }
     }
   

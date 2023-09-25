@@ -87,11 +87,11 @@ const TabUsers = () => {
 
 
   return (
-    <Table striped bordered hover>
+    <Table responsive striped bordered hover>
     <thead>
       <tr>
-        <th>ID</th>
-        <th>NOMBRE USUARIO</th>
+        <th>USUARIO</th>
+        <th>NOMBRE Y APELLIDO</th>
         <th>ROL</th>
         <th><Link to={`/createUser`} className="btn btn-primary"  >CREAR USUARIO</Link></th>
       </tr>
@@ -100,7 +100,7 @@ const TabUsers = () => {
       {
         users.map((user) =>
           <tr>
-            <td>{user._id}</td>
+            <td>{user.usuario}</td>
             <td>{user.nombre} {user.apellido}</td>
             <td>{user.role}</td>
             <td><button className='btn btn-danger' onClick={() => deleteUser(user._id)}>Eliminar</button>

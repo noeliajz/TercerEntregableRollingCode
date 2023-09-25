@@ -48,7 +48,7 @@ const Form = () => {
       }}}
   return (
     <>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex py-5 justify-content-center">
         <form className="w-50" onSubmit={handleSubmit}>
           <h2 className="form_tittle">Crea una Cuenta</h2>
 

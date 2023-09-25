@@ -1,0 +1,101 @@
+
+
+.content {
+    width:237px;
+    font-size:36px;
+    line-height:40px;
+    font-family:'Muli';
+    color:#447d56;
+    height:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-15px;
+    margin-left:-118px;
+    
+    &:before {
+      content:'[';
+      position:absolute;
+      left:-10px;
+      line-height:40px;
+    }
+    &:after {
+      content:']';
+      position:absolute;
+      right:-100px;
+      line-height:40px;
+    }
+    &:after, &:before {
+      color:#1cd2ae;
+      font-size:42px;
+      animation:2s linear 0s normal none infinite opacity;
+      -webkit-animation:2s ease-out 0s normal none infinite opacity;
+      -moz-animation:2s ease-out 0s normal none infinite opacity;
+      -o-animation:2s ease-out 0s normal none infinite opacity;
+    }
+  }
+  
+  .visible {
+    float:left;
+    font-weight:600;
+    overflow:hidden;
+    height:40px;   
+  }
+  
+  p {
+    
+    display:inline;
+    float:left;
+    margin:0;
+  }
+  
+  ul {
+    margin-top:0;
+    padding-left:110px;
+    text-align:left;
+    list-style:none;
+    animation:6s linear 0s normal none infinite;
+    -webkit-animation:6s linear 0s normal none infinite ;
+    -moz-animation:6s linear 0s normal none infinite ;
+    -o-animation:6s linear 0s normal none infinite ;
+  }
+  
+  ul li {
+    
+    line-height:40px;
+    margin: 20px;
+  }
+  
+  @-webkit-keyframes opacity {
+    0%   {opacity:0;}
+    50%  {opacity:1;}
+    100% {opacity:0;}
+  }
+  @keyframes opacity {
+    0%   {opacity:0;}
+    50%  {opacity:1;}
+    100% {opacity:0;}
+  }
+  
+  @-webkit-keyframes change {
+    0%   {margin-top:0;}
+    15%  {margin-top:0;}
+    25%  {margin-top:-40px;}
+    40%  {margin-top:-40px;}
+    50%  {margin-top:-80px;}
+    65%  {margin-top:-80px;}
+    75%  {margin-top:-40px;}
+    85%  {margin-top:-40px;}
+    100% {margin-top:0;}
+  }
+  @keyframes change {
+    0%   {margin-top:0;}
+    15%  {margin-top:0;}
+    25%  {margin-top:-40px;}
+    40%  {margin-top:-40px;}
+    50%  {margin-top:-80px;}
+    65%  {margin-top:-80px;}
+    75%  {margin-top:-40px;}
+    85%  {margin-top:-40px;}
+    100% {margin-top:0;}
+  }

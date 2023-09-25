@@ -15,7 +15,7 @@ import OneProduct from '../pages/OneProduct'
 import SobreNosotros from '../pages/SobreNosotros'
 import FirstPlan from '../pages/FirstPlan'
 import SecondPlan from '../pages/SecondPlan'
-import ThirdPlan from '../pages/thirdPlan'
+import ThirdPlan from '../pages/ThirdPlan'
 import Datepicker from '../pages/Datepicker'
 import EditProductPage from '../pages/EditProductPage'
 import CreateProductPage from '../pages/CreateProductPage'
@@ -25,6 +25,7 @@ import ProductAdminPage from '../pages/ProductAdminPage'
 import UserAdminPage from '../pages/UserAdminPage'
 import DailyPage from '../pages/DailyPage'
 import HistoryUserPage from '../pages/HistoryUserPage'
+import Error404 from '../pages/Error404'
 
 const RoutesView = ({setUserAdmin}) => {
   return (
@@ -53,6 +54,8 @@ const RoutesView = ({setUserAdmin}) => {
         <Route path='/UserAdmin' element={<UserAdminPage />} />
         <Route path='/DailyAdmin' element={<DailyPage />} />
         <Route path='/HistoryUserPage/:id' element={<HistoryUserPage />} />
+        <Route path='/Error404' element={<Error404/>} />
+
     </Routes>
   )
 }

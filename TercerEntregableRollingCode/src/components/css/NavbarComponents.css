@@ -4,5 +4,9 @@
  a{
     font-family: 'Kalam', cursive;
     font-family: 'Pacifico', cursive;
-    font-size: 12px;
 }
+
+.colorTitleNavbar{
+    background-color:  rgb(129, 178, 20);
+  }
+  
