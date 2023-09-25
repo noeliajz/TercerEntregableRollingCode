@@ -21,8 +21,8 @@ const ShopingCart = () => {
       valoresIniciales[producto._id] = 0
       setCantidadState(valoresIniciales)
     });
-    
-    setCart(dataProd.getCartUser.products)
+    console.log(dataProd)
+    setCart(dataProd.getCart.products)
   }
 
    const handleChange = (ev, idProd) => {
