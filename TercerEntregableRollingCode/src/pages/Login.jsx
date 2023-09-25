@@ -2,30 +2,63 @@ import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Swal from "sweetalert2";
+import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate
   const [formValue, setFormValue] = useState({
-    user: "admin1",
-    pass: "123",
+    user: " ",
+    pass: " ",
   });
+
   const handleChange = (ev) => {
     setFormValue({ ...formValue, [ev.target.name]: ev.target.value });
   };
 
-  const handleClick = () => {
+  const handleClick = async (ev) => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user.pass === formValue.pass) {
       user.role === "admin"
         ? (location.href = "/admin")
         : (location.href = "/user");
+
+        const res = await fetch ('http://localhost:8080/api/users/login', {
+          method: 'POST' ,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            usuario: formInputs.user,
+            contrasenia: formInputs.pass
+          })
+        })
+
+        const data = await res.json ()
+        if(data.userUpdate.role=== 'admin') {
+          localStorage.setItem('token',data.userUpdate.token )
+          localStorage.setItem('role',data.userUpdate.role )
+        
+          navigate ('/admin')}
+        else if (data.userUpdate.role=== 'user'){
+          localStorage.setItem('token',data.userUpdate.token )
+          localStorage.setItem('role',data.userUpdate.role )
+
+          navigate ('/user')
+        }
+
+        
+
+
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Las contraseñas no coinciden",
+        text: "Contraseña incorrecta",
       });
     }
   };
+
   return (
     <>
       <body className="colorLogin  ">
@@ -42,7 +75,7 @@ const Login = () => {
                     type="text"
                     name="user"
                     onChange={handleChange}
-                    placeholder="name@example.com"
+                    placeholder="Ingresar Usuario"
                   />
                 </Form.Group>
 
@@ -55,13 +88,21 @@ const Login = () => {
                     type="text"
                     name="pass"
                     onChange={handleChange}
-                    placeholder="name@example.com"
+                    placeholder="Ingresar Contraseña"
                   />
                 </Form.Group>
-                <Button onClick={handleClick}>Iniciar Sesión</Button>
-                <Button onClick={handleClick}>Iniciar con Facebook</Button>
-                <Button onClick={handleClick}>Iniciar con Gmail</Button>
-                <Button onClick={handleClick}>Recuperar Contraseña</Button>
+                <Button onClick={handleClick} className="ButtonLogin ">
+                  Iniciar Sesión
+                </Button>
+                <Button onClick={handleClick} className="ButtonLogin ">
+                  Iniciar con Facebook
+                </Button>
+                <Button onClick={handleClick} className="ButtonLogin ">
+                  Iniciar con Gmail
+                </Button>
+                <Button onClick={handleClick} className="ButtonLogin ">
+                  Recuperar Contraseña
+                </Button>
               </Form>
             </Col>
           </Row>

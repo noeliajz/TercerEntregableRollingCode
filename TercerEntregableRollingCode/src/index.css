@@ -18,6 +18,7 @@
   text-decoration: none;
   color: rgb(241, 241, 232);
   text-shadow: 1px 1px 2px rgb(32, 106, 93);
+  margin-top: auto;
 }
 
 .paddingTitle {
@@ -132,6 +133,14 @@
 }
 .colorTextTurn {
   color: #206a5d;
+}
+
+
+.ButtonLogin {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .custom-image{

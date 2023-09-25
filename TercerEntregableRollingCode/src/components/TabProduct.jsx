@@ -8,6 +8,8 @@ import Swal from 'sweetalert2'
 
 const TabProduct = () => {
     const [products, setProducts] = useState([])
+    const [refreshProd, setRefreshProd] = useState(false);
+    
     const getAllProducts = async () => {
       const res = await axios.get('http://localhost:8080/api/products')
       const  {getAllProd}= res.data
@@ -69,17 +71,23 @@ const TabProduct = () => {
           }
         })
       }
+      useEffect(() => {
+        getAllProducts()
+        setRefreshProd(false)
+      }, [refreshProd])
+    
     
     return (
         <>
-            <Table striped bordered hover>
-                <thead>
+            <Table striped bordered hover className='w-75'>
+                <thead className=''>
                     <tr>
                         <th>Codigo</th>
                         <th>Nombre</th>
                         <th>Precio</th>
-                        <th>imagen</th>
-                        <th><button className='btn btn-primary' onClick={() => deleteProduct(producto._id)}>AGREGAR PRODUCTO</button></th>
+                        <th>Cantidad</th>
+                        <th>
+                        <Link to={`/createProd`} className="btn btn-primary"  >AGREGAR PRODUCTO</Link></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,10 +97,10 @@ const TabProduct = () => {
                                 <td>{product.codigo}</td>
                                 <td>{product.nombre}</td>
                                 <td>{product.precio}</td>
-                                <td><img src={product.img}/></td>
+                                <td>{product.imagen}</td>
                                 <td>
                                 <div><button className='btn btn-danger'onClick={() => deleteProduct(product._id)}>Eliminar</button>
-                                <Link to={`/edit/${product._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link> </div>
+                                <Link to={`/editProduct/${product._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link> </div>
                                     <div><button className='btn btn-warning' onClick={() => selectProduct(products._id)}>Destacar producto</button></div>
                                     
                                 </td>

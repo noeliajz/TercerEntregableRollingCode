@@ -6,9 +6,9 @@ const CardsAllProducts = ({array}) => {
   /* carrito */
   const handleClick= async (id) =>{
     const idUser = JSON.parse(localStorage.getItem('idUser'))
+    console.log(idUser)
     const resCartUser = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCartUser = await resCartUser.json()
-    
 
     const idCart = dataCartUser.getUser.idCart
     const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}/${id}`, {

@@ -17,8 +17,8 @@ const WeatherApp = () => {
   }, []);
 
   function convertKelvinToCelsius(kelvin) {
-    const celsius = kelvin - 273.15; // La temperatura en Kelvin se resta por 273.15 para obtener grados Celsius
-    return celsius.toFixed(2); // Redondear a 2 decimales
+    const celsius = kelvin - 273.15;
+    return celsius.toFixed(2); 
   }
 
   return (
