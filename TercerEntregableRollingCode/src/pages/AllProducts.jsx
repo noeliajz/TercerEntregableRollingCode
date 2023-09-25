@@ -17,14 +17,14 @@ const AllProducts = () => {
 
 return (
   <>
-    <body className='AllProducts'>
+    <main className='AllProducts'>
     <h2 className='text-center '>Adquiri todos nuestros productos</h2> 
     <div className='container'>
         <div className="row py-4">
             <CardsAllProducts array={products}/>
          </div>
     </div>
-    </body>
+    </main>
   </>
 )
 }

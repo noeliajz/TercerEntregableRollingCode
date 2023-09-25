@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const CardTurn = () => {
   return (
     <>
-    <body className="PlanDescription">
+    <main className="PlanDescription">
     <h2 className="paddingTitle text-center colorTextTurn ">
         Reserva un turno con nosotros !
       </h2>
@@ -42,7 +42,7 @@ const CardTurn = () => {
           </Col>
         </Row>
       </Container>
-    </body>
+    </main>
   
   </>
   );
