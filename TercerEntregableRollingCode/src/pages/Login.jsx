@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Swal from "sweetalert2";
 import Axios from "axios";
-=======
-import React, { useEffect, useState } from "react";
->>>>>>> fc930fe29cedbb50638c65d2f415832c0fc83f86
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link, NavLink, redirect } from 'react-router-dom';
-import './css/NavbarComponents.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-=======
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -16,9 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink, redirect } from "react-router-dom";
 import "./css/NavbarComponents.css";
-import logo from "../components/img/logo.png";
 import { HiShoppingCart} from "react-icons/hi"
->>>>>>> fc930fe29cedbb50638c65d2f415832c0fc83f86
 
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
   const token = JSON.parse(localStorage.getItem("token")) || "";
@@ -33,7 +20,6 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
     location.href = "/";
   };
   return (
-<<<<<<< HEAD
     <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar"  >
     <Container>
       <Navbar.Brand to={role === 'admin' ? '/adminPage' : role === 'user' ? '/user' : '/'} style={{color:' rgb(129, 178, 20)'}} >
@@ -46,20 +32,6 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
             />{' '}
             KING PET
           </Navbar.Brand>
-=======
-    <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar">
-      <Container>
-        <Navbar.Brand to="/" style={{ color: " rgb(129, 178, 20)" }}>
-          <img
-            alt=""
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-          KING PET
-        </Navbar.Brand>
->>>>>>> fc930fe29cedbb50638c65d2f415832c0fc83f86
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
