@@ -5,10 +5,10 @@ import CardTurn from '../components/CardTurn';
 const Turn = () => {
   return (
   <>
-  <body>
+  <main>
   <CardTurn/>
 
-  </body>
+  </main>
   </>
   )
 }
