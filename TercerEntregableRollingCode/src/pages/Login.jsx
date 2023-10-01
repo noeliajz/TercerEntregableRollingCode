@@ -46,23 +46,23 @@ const Login = () => {
         const data = await res.json();
 
         if (data.userUpdate.role === "admin") {
-          localStorage.setItem("token", JSON.stringify(data.userUpdate.token));
-          localStorage.setItem("role", JSON.stringify(data.userUpdate.role));
-          localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id));
-          localStorage.setItem(
-            "nombre",
-            JSON.stringify(data.userUpdate.nombre)
-          );
+          localStorage.setItem("token", JSON.stringify(data.userUpdate.token))
+          localStorage.setItem("role", JSON.stringify(data.userUpdate.role))
+          localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id))
+          localStorage.setItem(  "nombre", JSON.stringify(data.userUpdate.nombre)
+          )
+          navigate('/adminPage')
 /*           location.href = "/adminPage";
  */          
-         navigate('/adminPage')
+        
         } else if (data.userUpdate.role === "user") {
-          localStorage.setItem("token", JSON.stringify(data.userUpdate.token));
-          localStorage.setItem("role", JSON.stringify(data.userUpdate.role));
-          localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id));
+          localStorage.setItem("token", JSON.stringify(data.userUpdate.token))
+          localStorage.setItem("role", JSON.stringify(data.userUpdate.role))
+          localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id))
+          navigate('/user')
 /*           location.href = "/user";
  */       
-          navigate('/user')
+          
       }
       }
     } else {
