@@ -6,8 +6,8 @@ import format from "date-fns/format"
 import { addDays } from 'date-fns'
 
 
-import 'react-date-range/dist/styles.css'; // main style file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import 'react-date-range/dist/styles.css'; 
+import 'react-date-range/dist/theme/default.css'; 
 
 
 const DateRangePickerComp = () => {
