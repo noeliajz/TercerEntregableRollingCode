@@ -7,7 +7,7 @@ import PlanDescription from '../pages/PlanDescription'
 import ShopingCart from '../pages/ShopingCart'
 import Turn from '../pages/Turn'
 import UserPage from '../pages/UserPage'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import AllProducts from '../pages/AllProducts'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
@@ -26,35 +26,128 @@ import UserAdminPage from '../pages/UserAdminPage'
 import DailyPage from '../pages/DailyPage'
 import HistoryUserPage from '../pages/HistoryUserPage'
 import Error404 from '../pages/Error404'
+import PrivateRoute from '../components/PrivatesRoutes'
 
-const RoutesView = ({setUserAdmin}) => {
+const RoutesView = ({ setUserAdmin }) => {
   return (
     <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/adminPage' element={<AdminPage/>} />
-        <Route  path='/product/:id' element={<OneProduct/>}/>
-        <Route  path='/record/:id' element={<RecordPage/>}/>
-        <Route  path='/shopingCart' element={<ShopingCart/>}/>
-        <Route  path='/planDesc' element={<PlanDescription/>}/>
-        <Route  path='/turn' element={<Turn/>}/>
-        <Route  path='/user' element={<UserPage setUserAdmin={setUserAdmin}/>}/>
-        <Route  path='/allproducts' element={<AllProducts/>}/>
-        <Route  path='/sobrenosotros' element={<SobreNosotros/>}/>
-        <Route  path='/register' element={<Register/>}/>
-        <Route  path='/login' element={<Login/>}/>
-        <Route  path='/firstplan' element={<FirstPlan/>}/>
-        <Route  path='/secondplan' element={<SecondPlan/>}/>
-        <Route  path='/thirdplan' element={<ThirdPlan/>}/>
-        <Route  path='/datepicker' element={<Datepicker/>}/>
-        <Route path='/editProduct/:id' element={<EditProductPage />} />
-        <Route path='/createProd' element={<CreateProductPage />} />
-        <Route path='/createUser' element={<CreateUserPage />} />
-        <Route path='/editUser/:id' element={<EditUserPage />} />
-        <Route path='/ProductAdmin' element={<ProductAdminPage />} />
-        <Route path='/UserAdmin' element={<UserAdminPage />} />
-        <Route path='/DailyAdmin' element={<DailyPage />} />
-        <Route path='/HistoryUserPage/:id' element={<HistoryUserPage />} />
-        <Route path='/Error404' element={<Error404/>} />
+      <Route path='/product/:id' element={<OneProduct />} />
+      <Route path='/planDesc' element={<PlanDescription />} />
+      <Route path='/allproducts' element={<AllProducts />} />
+      <Route path='/sobrenosotros' element={<SobreNosotros />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/firstplan' element={<FirstPlan />} />
+      <Route path='/secondplan' element={<SecondPlan />} />
+      <Route path='/thirdplan' element={<ThirdPlan />} />
+      <Route path='/*' element={<Error404 />} />
+
+      <Route path='/shopingCart' element={
+        <PrivateRoute role={'user'}>
+          <ShopingCart />
+        </PrivateRoute>
+      }>
+      </Route>
+
+      <Route path='/user' element={
+        <PrivateRoute role={'user'}>
+          <UserPage setUserAdmin={setUserAdmin} />
+        </PrivateRoute>
+      }>
+      </Route>
+      
+      <Route path='/datepicker' element={
+        <PrivateRoute role={'user'}>
+          <Datepicker />
+        </PrivateRoute>
+      }>
+      </Route>
+
+      <Route path='/' element={<Home />} />
+
+      <Route path='/adminPage' element={
+        <PrivateRoute role={'admin'}>
+          <AdminPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+      <Route path='/record/:id' element={
+        <PrivateRoute role={'admin'}>
+          <RecordPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+      <Route path='/turn' element={
+        <PrivateRoute role={'admin'}>
+          <Turn />
+        </PrivateRoute>
+      }>
+      </Route>
+
+      <Route path='/editProduct/:id' element={
+        <PrivateRoute role={'admin'}>
+          <EditProductPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+      <Route path='/createProd' element={
+        <PrivateRoute role={'admin'}>
+          <CreateProductPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+
+      <Route path='/createUser' element={
+        <PrivateRoute role={'admin'}>
+          <CreateUserPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+
+      <Route path='/editUser/:id' element={
+        <PrivateRoute role={'admin'}>
+          <EditUserPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+
+      <Route path='/ProductAdmin' element={
+        <PrivateRoute role={'admin'}>
+          <ProductAdminPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+
+      <Route path='/UserAdmin' element={
+        <PrivateRoute role={'admin'}>
+          <UserAdminPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+
+      <Route path='/DailyAdmin' element={
+        <PrivateRoute role={'admin'}>
+          <DailyPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
+
+      <Route path='/HistoryUserPage/:id' element={
+        <PrivateRoute role={'admin'}>
+          <HistoryUserPage />
+        </PrivateRoute>
+      }>
+      </Route>
+
 
     </Routes>
   )
