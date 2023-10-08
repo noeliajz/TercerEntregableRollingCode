@@ -1,6 +1,5 @@
 
 import React from 'react'
-import AdminNavigate from '../components/AdminNavigate';
 import '../components/css/adminPage.css'
 
 const AdminPage = () => {
@@ -8,27 +7,12 @@ const AdminPage = () => {
 
   return (
     <> 
-  
-    <div className="conteiner d-flex vh-50 ">
-      <div className=" w-25 bg-dark "style={{ marginTop: "55px"}}>
-      <AdminNavigate/>
-      </div>
+    <section className="styleAdminPage text-center ">
       <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'/>
-      <div className=" content">
-        <div className="visible">
-        <p>BIENVENIDO {name}</p>
-        <ul>
-          <li>MUNDO</li>
-          <li>DOCTOR</li>
-          <li>ADMINISTRADOR</li>
-        </ul>
-        </div>
-      
-      </div>
-        
-      
-      
-    </div>
+      <div className="content ">
+        <h3 className='content'>¡Bienvenido {name}!</h3>
+      </div> 
+    </section>
     </>
   )
 }

@@ -93,9 +93,9 @@ const EditUserPage = () => {
   
     return (
       <>
-      <div className="conteiner w-100 d-flex justify-content-center mb-5" style={{ marginTop: "100px"}}>
+      <section className="conteiner w-100 d-flex justify-content-center pb-5 styleUserAdminPage" >
         
-        <form>
+        <form className='text-center'>
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label">Nombre</label>
             <input type="text" name='name' value={formValues.name}  className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleChange} />
@@ -113,9 +113,9 @@ const EditUserPage = () => {
             <input type="text" name='role' value={formValues.role} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputPassword1" onChange={handleChange} />
           </div>
   
-          <button type="submit" className="btn btn-primary" onClick={handleClick}>Editar</button>
+          <button type="submit" className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} onClick={handleClick}>Editar</button>
         </form>
-        </div>
+        </section>
       </>
     )
   }

@@ -40,7 +40,7 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
             <NavLink
               to={
                 role === "admin"
-                  ? "/adminPage"
+                  ? "/"
                   : role === "user"
                   ? "/user"
                   : "/"
