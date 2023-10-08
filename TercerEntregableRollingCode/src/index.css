@@ -196,6 +196,19 @@
   color:  rgb(129, 178, 20);
 }
 
+.colorCart{
+  background:   #bfdcae;
+}
+.styleUserAdminPage{
+  background:   #bfdcae;
+  padding-top: 100px;
+}
+.styleAdminPage{
+  background:   #206A5D;
+  padding-top: 100px;
+  height: 500px;
+}
+
 .carrusel{
   display: flex;
   flex-direction: column;
@@ -204,4 +217,5 @@
 .work-section-top{
   display: flex;
   flex-direction: column;
+
 }

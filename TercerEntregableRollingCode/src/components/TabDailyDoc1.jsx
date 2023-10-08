@@ -27,13 +27,15 @@ const TabDailyDoc1 = () => {
   }, [])
 
   return (
-    <Table striped bordered hover>
+    <Table responsive striped bordered hover className='text-center' >
     <thead>
       <tr>
         <th>HORARIO</th>
         <th>NOMBRE USUARIO</th>
         <th>NOMBRE DE MASCOTA</th>
         <th>ESPECIE</th>
+        <th>DATOS</th>
+
       </tr>
     </thead>
     <tbody>
@@ -44,7 +46,7 @@ const TabDailyDoc1 = () => {
             <td>{user.nombre} {user.apellido}</td>
             <td>{user.nombre_mascota}</td>
             <td>{user.especie}</td>
-            <td><Link to={`/HistoryUserPage/${user._id}`} className="btn btn-primary" >LEGAJO</Link></td>
+            <td><Link to={`/HistoryUserPage/${user._id}`} className="btn" style={{background:'#81B214', color:'#F1F1E8'}} >LEGAJO</Link></td>
           </tr>
 
         )

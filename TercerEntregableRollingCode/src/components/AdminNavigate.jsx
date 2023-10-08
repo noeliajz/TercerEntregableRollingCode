@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 const AdminNavigate = () => {
   return (
-    <Container >
+   /*  <Container >
     <Row >
       <Col className="bg-dark text-white vh-100">
         <Nav style={{ marginTop: "50px"}} defaultActiveKey="/" className="flex-column justify-content-center align-content-center ">
@@ -18,7 +18,8 @@ const AdminNavigate = () => {
         </Nav>
       </Col>
       </Row>
-      </Container>
+      </Container> */
+      <h3>h</h3>
   )
 }
 

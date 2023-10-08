@@ -1,27 +1,17 @@
-import React from 'react'
-import AdminNavigate from '../components/AdminNavigate'
-import TabUsers from '../components/TabUsers'
+import React from "react";
+import TabUsers from "../components/TabUsers";
 
 const UserAdminPage = () => {
   return (
     <>
-        <div className="conteiner d-flex"style={{ marginTop: "55px"}}>
-      <div className="column w-25">
-      <AdminNavigate/>
-      </div>
-     
-      <div className="column  w-100">
-      <TabUsers/>
-      </div>
+      <section className=" d-flex justify-content-center styleUserAdminPage" >
+      
+
+          <TabUsers />
         
-      
-      
-    </div>
-
-    
-    
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default UserAdminPage
+export default UserAdminPage;

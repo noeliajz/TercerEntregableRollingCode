@@ -88,7 +88,7 @@ const CreateUserPage = () => {
   
     return (
       <>
-      <div className='d-flex justify-content-center mb-5' style={{ marginTop: "100px"}}>
+      <section className='d-flex justify-content-center pb-5 styleUserAdminPage' >
       <form className='w-25'>
           <div className="mb-3">
             <label for="exampleInputEmail1" className="form-label">Nombre</label>
@@ -119,10 +119,10 @@ const CreateUserPage = () => {
             <input type="text" name='role' value={formValues.role} className={inputCheckName ? 'form-control is-invalid' : 'form-control'} id="exampleInputPassword1" onChange={handleChange} />
           </div>
   
-          <button type="submit" className="btn btn-primary" onClick={handleClick}>Crear Usuario</button>
+          <button type="submit" className="btn " style={{background:'#206A5D', color:'#F1F1E8'}} onClick={handleClick}>Crear Usuario</button>
         </form>
 
-      </div>
+      </section>
         
       </>
     )

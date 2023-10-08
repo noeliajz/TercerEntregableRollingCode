@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import Col from 'react-bootstrap/esm/Col';
+import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/esm/Row';
 import { useNavigate, useParams } from 'react-router-dom'
 
 const HistoryUserPage = () => {
@@ -18,11 +21,11 @@ const HistoryUserPage = () => {
     
   return (
     <>
-    <div className="d-flex justify-content-center ">
+    <section className="styleUserAdminPage">
 
-    <div className="container  pb-5"style={{ marginTop: "100px" }}>
-        <div className="row ">
-          <div className="col ">
+    <Container className='d-flex justify-content-center pb-4'>
+        <Row>
+          <Col>
             {/* <div key={product?._id}>
           <h4>{product?.nombre}</h4>
           <h4>{product?.precio}</h4>
@@ -45,13 +48,8 @@ const HistoryUserPage = () => {
                 
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container  pb-5"style={{ marginTop: "100px" }}>
-        <div className="row ">
-          <div className="col ">
+          </Col>
+          <Col>
             {/* <div key={product?._id}>
           <h4>{product?.nombre}</h4>
           <h4>{product?.precio}</h4>
@@ -75,10 +73,12 @@ const HistoryUserPage = () => {
                 
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+      </Container>
+
+      
+    </section>
       
     </>
   )
