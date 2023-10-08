@@ -57,7 +57,7 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
                 <NavLink to="/ProductAdmin" className=" fs-5 styleNavbar px-1 ">
                   Productos
                 </NavLink>
-                <NavLink to="/DailyAdmin" className=" fs-5 styleNavbar px-1 ">
+                <NavLink to="/turn" className=" fs-5 styleNavbar px-1 ">
                   Turnos
                 </NavLink>
               </>
