@@ -5,7 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink, redirect } from "react-router-dom";
 import "./css/NavbarComponents.css";
-import logo from "../components/img/logo.png";
 import { HiShoppingCart} from "react-icons/hi"
 
 const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
@@ -21,18 +20,18 @@ const NavbarComponents = ({ userAdmin, setUserAdmin }) => {
     location.href = "/";
   };
   return (
-    <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar">
-      <Container>
-        <Navbar.Brand to="/" style={{ color: " rgb(129, 178, 20)" }}>
-          <img
-            alt=""
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-          KING PET
-        </Navbar.Brand>
+    <Navbar expand="lg" fixed="top" className="navbar styleColorNavbar"  >
+    <Container>
+      <Navbar.Brand to={role === 'admin' ? '/adminPage' : role === 'user' ? '/user' : '/'} style={{color:' rgb(129, 178, 20)'}} >
+            <img
+              alt=""
+              src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/logo.png.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+            KING PET
+          </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

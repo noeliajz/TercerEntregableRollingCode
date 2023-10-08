@@ -17,7 +17,7 @@ const Home = () => {
       </div>
 
       <div className="container home-text-section text-center">
-        <h1 className="primary-heading text-center">Conoce nuestros planes</h1>
+        <h1 className="primary-heading text-center mx-auto">Conoce nuestros planes</h1>
 
         <div className="primary-text p-3">
 

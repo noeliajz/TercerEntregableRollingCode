@@ -1,79 +1,61 @@
-import React from 'react'
-import { useEffect, useRef, useState } from 'react'
-import { Calendar } from "react-date-range"
-import format from "date-fns/format"
+import React from "react";
+import { useEffect, useRef, useState } from "react";
+import { Calendar } from "react-date-range";
+import format from "date-fns/format";
 
-import 'react-date-range/dist/styles.css'; // main style file
-import 'react-date-range/dist/theme/default.css'; // theme css file
-
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 
 const Calendarcomp = () => {
+  const [calendar, Setcalendar] = useState("");
 
+  const [open, setOpen] = useState(false);
 
-  // date state
-const  [calendar, Setcalendar] = useState('')
+  const refOne = useRef(null);
 
-// open close
-const [open, setOpen] = useState(false)
+  useEffect(() => {
+    Setcalendar(format(new Date(), "MM/dd/yyyy"));
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
 
-const refOne = useRef(null)
+  const hideOnEscape = (e) => {
+    console.log(e.key);
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
 
-useEffect(() => {
-  
-  Setcalendar(format(new Date, 'MM/dd/yyyy'))
-  document.addEventListener("keydown", hideOnEscape, true)
-  document.addEventListener("click", hideOnClickOutside, true)
-}, [])
+  const hideOnClickOutside = (e) => {
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
 
-
-// hide dropdown on ESC press
-const hideOnEscape = (e) => {
-  console.log(e.key)
-  if( e.key === "Escape") {
-    setOpen(false)
-  }
-
-}
-
-const hideOnClickOutside = (e) => {
-  // console.log(refOne.current)
-  // console.log(e.target)
-  if ( refOne.current && !refOne.current.contains(e.target) ){
-    setOpen(false)
-  }
-}
-
-
-// on date change, store date in state
-const handleSelect = (date) => {
-// console.log(date)
-// console.log(format(date, 'MM/dd/yyyy'))
-Setcalendar(format(date, 'MM/dd/yyyy'))
-}
+  const handleSelect = (date) => {
+    Setcalendar(format(date, "MM/dd/yyyy"));
+  };
 
   return (
-    <div className='calendarWrap'>
-
-      <input 
-      value={ calendar }
-      readOnly
-      className='inputBox'
-      onClick={() => setOpen(open => !open) }
+    <div className="calendarWrap">
+      <input
+        value={calendar}
+        readOnly
+        className="inputBox"
+        onClick={() => setOpen((open) => !open)}
       />
 
-
       <div ref={refOne}>
-
-      {open &&
-    <Calendar 
-    date={ new Date () }
-    onChange = { handleSelect }
-    className='calendarElement'
-    />
-      }
+        {open && (
+          <Calendar
+            date={new Date()}
+            onChange={handleSelect}
+            className="calendarElement"
+          />
+        )}
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Calendarcomp
+export default Calendarcomp;

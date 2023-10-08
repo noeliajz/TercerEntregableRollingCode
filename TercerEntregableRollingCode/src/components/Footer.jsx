@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
-import logo from "../components/img/logo.png";
 
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
          <Container fluid className=' footer text-center py-4 ' >
             <Row className='justify-content-between py-3'>
                 <Link to="/" alt="">
-                  <img src={logo} alt="" width="190px" height="190px"/>
+                  <img src="https://res.cloudinary.com/diozlbqlt/image/upload/v1695135569/proyecto/img/logo.png.png" alt="" width="190px" height="190px"/>
                 </Link>
             </Row>
             <Row className='justify-content-between '>

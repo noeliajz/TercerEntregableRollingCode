@@ -56,11 +56,6 @@
   cursor: pointer;
 }
 
-.textomarcas {
-  font-size: 24px;
-  margin: 20px 0;
-}
-
 .nosotros {
   background-color: #81b214;
 }
@@ -130,6 +125,7 @@
 }
 .sobreNosotros {
   padding-top: 130px;
+  background-color: #206a5d;
 }
 .colorTextTurn {
   color: #206a5d;
@@ -151,16 +147,16 @@
 .containerWea {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente */
-  min-height: 100vh; /* Hace que el contenedor ocupe al menos el 100% del alto de la ventana */
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; /
 }
 
 .calendarWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+  height: 100vh;
 }
 
 .centered-content {
@@ -168,7 +164,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+  height: 100vh; 
 }
 
 .App{
@@ -199,6 +195,7 @@
 .colorTitleNavbar{
   color:  rgb(129, 178, 20);
 }
+
 .colorCart{
   background:   #bfdcae;
 }
@@ -210,4 +207,15 @@
   background:   #206A5D;
   padding-top: 100px;
   height: 500px;
+}
+
+.carrusel{
+  display: flex;
+  flex-direction: column;
+}
+
+.work-section-top{
+  display: flex;
+  flex-direction: column;
+
 }
