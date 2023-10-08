@@ -2,28 +2,34 @@ import React, { useEffect, useState } from 'react'
 import CardProduct from '../components/CardProduct'
 import CarrouselPublicity from '../components/CarrouselPublicity'
 import PlanDescription from './PlanDescription'
-
-/* noe */
 import axios from 'axios';
 import CardsAllProducts from '../components/CardsAllProducts'
-/*  */
+import clienteAxios from '../utils/axiosClient';
+
 
 
 const UserPage = ({ setUserAdmin }) => {
-/* noe */
 
 const [products, setProducts] = useState([])
+
 const getAllProducts = async () => {
-  const res = await axios.get('http://localhost:8080/api/products')
-  const  {getAllProd}= res.data
-  setProducts(getAllProd)}
+  try {
+    const res = await clienteAxios.get('/products')
+    setProducts(res.data.getAllProd)
+    console.log(res)
+  } catch (error) {
+    console.log(error)
+  }
+/*   const  {getAllProd}= res.data
+ */  
+}
 
   useEffect(() => {
       getAllProducts()
   }, [])
  
   console.log(products)
-  /* ------ */
+  
   
 
   useEffect(() => {
@@ -48,10 +54,7 @@ const getAllProducts = async () => {
           </div>
         
         
-{/*          <CardProduct />
- */}        
 
-{/* noe */}
 <h2 className='text-center'>Adquiri todos nuestros productos</h2> 
     <div className="container">
         <div className="row">
@@ -61,7 +64,7 @@ const getAllProducts = async () => {
         </div>
       </div>
 
-{/* ------ */}
+
   </>
 
 
