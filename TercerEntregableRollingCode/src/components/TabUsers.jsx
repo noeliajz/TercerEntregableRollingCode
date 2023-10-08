@@ -87,13 +87,13 @@ const TabUsers = () => {
 
 
   return (
-    <Table responsive striped bordered hover>
+    <Table responsive striped bordered hover className='text-center' >
     <thead>
       <tr>
         <th>USUARIO</th>
         <th>NOMBRE Y APELLIDO</th>
         <th>ROL</th>
-        <th><Link to={`/createUser`} className="btn btn-primary"  >CREAR USUARIO</Link></th>
+        <th><Link to={`/createUser`} className="btn" style={{background:'#81B214', color:'#F1F1E8'}}  >CREAR USUARIO</Link></th>
       </tr>
     </thead>
     <tbody>
@@ -103,13 +103,11 @@ const TabUsers = () => {
             <td>{user.usuario}</td>
             <td>{user.nombre} {user.apellido}</td>
             <td>{user.role}</td>
-            <td><button className='btn btn-danger' onClick={() => deleteUser(user._id)}>Eliminar</button>
-            <Link to={`/editUser/${user._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link></td>
+            <td><button className='btn btn-danger mx-3' onClick={() => deleteUser(user._id)}>Eliminar</button>
+            <Link to={`/editUser/${user._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >Editar</Link></td>
           </tr>
-
         )
       }
-
     </tbody>
   </Table>
   )
