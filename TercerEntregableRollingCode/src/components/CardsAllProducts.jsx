@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import clienteAxios, { config } from '../utils/axiosClient'
 
 const CardsAllProducts = ({array}) => {
   
   const handleClick= async (id) =>{
-    console.log(id)
+    try {
+      console.log(id)
     const idUser = JSON.parse(localStorage.getItem('idUser'))
     const token = JSON.parse(localStorage.getItem('token'))
-    const resCart = await fetch(`http://localhost:8080/api/users/${idUser}`)
+    
+    const resCart = await clienteAxios.get(`users/${idUser}`, {}, config)
+    console.log(resCart)
+    } catch (error) {
+      if(error.response.status === 500){
+        Swal.fire({
+          icon: 'error',
+          title: 'ERROR...',
+          text: error.response.data.msg,
+        })
+    }}
+    /* const resCart = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCart = await resCart.json()
     const idCart = dataCart.getUser.idCart
     const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}/${id}`, {
@@ -34,7 +47,7 @@ const CardsAllProducts = ({array}) => {
         showConfirmButton: false,
         timer: 1500
       })
-    }
+    } */
      
    
   }

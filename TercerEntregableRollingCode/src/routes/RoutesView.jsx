@@ -80,7 +80,7 @@ const RoutesView = ({ setUserAdmin }) => {
       </Route>
 
       <Route path='/turn' element={
-        <PrivateRoute role={'admin'}>
+        <PrivateRoute role={'user'}>
           <Turn />
         </PrivateRoute>
       }>
