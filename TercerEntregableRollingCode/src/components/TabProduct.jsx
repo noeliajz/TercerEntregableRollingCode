@@ -82,7 +82,6 @@ const TabProduct = () => {
             <Table responsive striped bordered hover className=' w-75'>
                 <thead className=''>
                     <tr>
-                        <th>Codigo</th>
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
@@ -94,14 +93,13 @@ const TabProduct = () => {
                     {
                         products.map((product) =>
                             <tr>
-                                <td>{product.codigo}</td>
                                 <td>{product.nombre}</td>
                                 <td>{product.precio}</td>
                                 <td>{product.imagen}</td>
-                                <td>
-                                <div><button className='btn btn-danger'onClick={() => deleteProduct(product._id)}>Eliminar</button>
-                                <Link to={`/editProduct/${product._id}`} className="btn" style={{background:'#206A5D', color:'#F1F1E8'}} >editar</Link> </div>
-                                    <div><button className='btn btn-warning' onClick={() => selectProduct(products._id)}>Destacar producto</button></div>
+                                <td className='d-flex'>
+                                <button className='btn btn-danger mx-2 'onClick={() => deleteProduct(product._id)}>Eliminar</button>
+                                <Link to={`/editProduct/${product._id}`} className="btn mx-2 " style={{background:'#206A5D', color:'#F1F1E8'}} >Editar</Link> 
+                                  <button className="btn" style={{background:'#BFDCAE', color:'#206A5D'}} onClick={() => selectProduct(products._id)}>Destacar producto</button>
                                     
                                 </td>
                             </tr>

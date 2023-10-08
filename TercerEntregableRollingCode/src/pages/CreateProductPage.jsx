@@ -84,8 +84,8 @@ const CreateProductPage = () => {
 
   return (
     <>
-      <div
-        className="d-flex justify-content-center "
+      <section
+        className="d-flex justify-content-center styleUserAdminPage" 
         style={{ marginTop: "50px" }}
       >
         <form className="w-25">
@@ -182,13 +182,13 @@ const CreateProductPage = () => {
 
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn" style={{background:'#206A5D', color:'#F1F1E8'}}
             onClick={handleClick}
           >
             Crear Producto
           </button>
         </form>
-      </div>
+      </section>
     </>
   );
 };
