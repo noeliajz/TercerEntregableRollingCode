@@ -9,18 +9,35 @@ const CardsAllProducts = ({array}) => {
     try {
       console.log(id)
     const idUser = JSON.parse(localStorage.getItem('idUser'))
-    const token = JSON.parse(localStorage.getItem('token'))
     
-    const resCart = await clienteAxios.get(`users/${idUser}`, {}, config)
-    console.log(resCart)
-    } catch (error) {
+    const resCart = await clienteAxios.get(`/users/${idUser}`,  config)
+    const resProd = await clienteAxios.post(`/cart/${resCart.data.getUser.idCart}/${id}`, {}, config)
+    if(resProd.status === 200){
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: resProd.data.msg,
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+  } catch (error) {
       if(error.response.status === 500){
         Swal.fire({
           icon: 'error',
           title: 'ERROR...',
           text: error.response.data.msg,
         })
-    }}
+    } else if(error.response.status === 400){
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR...',
+        text: error.response.data.msg,
+      })
+    }
+  }
+
+
     /* const resCart = await fetch(`http://localhost:8080/api/users/${idUser}`)
     const dataCart = await resCart.json()
     const idCart = dataCart.getUser.idCart
