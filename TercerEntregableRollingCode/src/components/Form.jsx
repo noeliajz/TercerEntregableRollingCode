@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Swal from 'sweetalert2'
+import clienteAxios, { config } from "../utils/axiosClient";
 
 
 const Form = () => {
@@ -21,7 +22,25 @@ const Form = () => {
   
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    
+    /* try {
+      const res = await clienteAxios.post('/users', {  y se borra (event)
+        nombre: formInputs.name,
+          apellido: formInputs.lastname,
+          direccion: formInputs.address,
+          usuario: formInputs.user,
+          contrasenia: formInputs.pass
+      }, config)
+      if(res.status === 201)
+      {
+        alert("registro exitoso")
+         setTimeout(() => {Navigate('/login')}, 3000)}}
+    } catch (error) {
+      console.log(error)
+    } */
+   
+
+    event.preventDefault()/* se borra esto */
     if (formInputs.pass === formInputs.repeatPass) {
      
       const res = await fetch("http://localhost:8080/api/users", {
@@ -43,7 +62,7 @@ const Form = () => {
       if(data.status === 201)
       {
         alert("registro exitoso")
-          
+  
         setTimeout(() => {location.href='/login'}, 3000)
       }}}
   return (

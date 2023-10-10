@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import clienteAxios from "../utils/axiosClient";
 
 const OneProduct = () => {
   const params = useParams();
   const [product, setProduct] = useState({});
 
   const getOneProduct = async () => {
-    const res = await fetch(`http://localhost:8080/api/products/${params.id}`);
-    const data = await res.json();
-    const { getOneProd } = data;
-    console.log(getOneProd);
-    setProduct(getOneProd);
+    const res = await clienteAxios.get(`/products/${params.id}`)
+    setProduct(res.data.getOneProd);
+   
   };
   useEffect(() => {
     getOneProduct();
