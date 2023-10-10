@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Swal from "sweetalert2";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
+import clienteAxios, { config } from "../utils/axiosClient";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,36 +33,28 @@ const Login = () => {
         setUserInput(false);
         setPassInput(false);
 
-        const res = await fetch("http://localhost:8080/api/users/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            usuario: formInputs.user,
-            contrasenia: formInputs.pass,
-          }),
-        });
+        const res = await clienteAxios.post('/users/login', {
+          usuario: formInputs.user,
+          contrasenia: formInputs.pass,
+        }, config)
+      
 
-        const data = await res.json();
-
-        if (data.userUpdate.role === "admin") {
-          localStorage.setItem("token", JSON.stringify(data.userUpdate.token))
-          localStorage.setItem("role", JSON.stringify(data.userUpdate.role))
-          localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id))
-          localStorage.setItem(  "nombre", JSON.stringify(data.userUpdate.nombre)
+      
+        if (res.data.userUpdate.role === "admin") {
+          localStorage.setItem("token", JSON.stringify(res.data.userUpdate.token))
+          localStorage.setItem("role", JSON.stringify(res.data.userUpdate.role))
+          localStorage.setItem("idUser", JSON.stringify(res.data.userUpdate._id))
+          localStorage.setItem(  "nombre", JSON.stringify(res.data.userUpdate.nombre)
           )
           navigate('/adminPage')
-/*           location.href = "/adminPage";
- */          
+          
         
-        } else if (data.userUpdate.role === "user") {
-          localStorage.setItem("token", JSON.stringify(data.userUpdate.token))
-          localStorage.setItem("role", JSON.stringify(data.userUpdate.role))
-          localStorage.setItem("idUser", JSON.stringify(data.userUpdate._id))
+        } else if (res.data.userUpdate.role === "user") {
+          localStorage.setItem("token", JSON.stringify(res.data.userUpdate.token))
+          localStorage.setItem("role", JSON.stringify(res.data.userUpdate.role))
+          localStorage.setItem("idUser", JSON.stringify(res.data.userUpdate._id))
           navigate('/user')
-/*           location.href = "/user";
- */       
+       
           
       }
       }
