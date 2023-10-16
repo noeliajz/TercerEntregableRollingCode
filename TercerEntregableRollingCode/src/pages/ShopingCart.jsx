@@ -41,14 +41,9 @@ const ShopingCart = () => {
   };
 
   const handleClickMP = async () => {
-    const res = await fetch("http://localhost:8080/api/pay", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-    });
-    const data = await res.json();
-    location.href = `${data.res.init_point}`;
+     const res = await clienteAxios.post('/pay', {}, config)
+     location.href = `${res.data.res.init_point}`;
+    
   };
 
   useEffect(() => {

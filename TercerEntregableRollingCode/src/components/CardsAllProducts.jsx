@@ -39,33 +39,7 @@ const CardsAllProducts = ({array}) => {
   }
 
 
-    /* const resCart = await fetch(`http://localhost:8080/api/users/${idUser}`)
-    const dataCart = await resCart.json()
-    const idCart = dataCart.getUser.idCart
-    const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}/${id}`, {
-      method: 'POST',
-      headers: {
-        "content-type":"application/json",
-        'authorization': `Bearer ${token}`
-      }
-    })  
-     
-    const dataProd = await resProd.json()
-    if(dataProd.status === 400){
-      Swal.fire({
-        icon: 'error',
-        title: 'ERROR...',
-        text: dataProd.msg,
-      })
-    }else{
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        text: dataProd.msg,
-        showConfirmButton: false,
-        timer: 1500
-      })
-    } */
+
      
    
   }
