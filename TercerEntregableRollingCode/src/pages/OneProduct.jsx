@@ -32,9 +32,7 @@ const OneProduct = () => {
               <div className="card-body">
                 <h5 className="card-title">{product.nombre}</h5>
                 <p className="card-text">Precio: ${product.precio}</p>
-                <p className="card-text">
-                  Código de producto: {product.codigo}
-                </p>
+                
                 <p className="card-text">Descripción: {product.descripcion}</p>
                 <button
                   className="btn btn-outline-success"

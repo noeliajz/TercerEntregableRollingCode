@@ -1,6 +1,7 @@
 import { Button } from "bootstrap";
 import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
+import clienteAxios, { config } from "../utils/axiosClient";
 
 const ShopingCart = () => {
   const [cart, setCart] = useState([]);
@@ -9,20 +10,19 @@ const ShopingCart = () => {
 
   const getCartUser = async () => {
     const idUser = JSON.parse(localStorage.getItem("idUser"));
+    const resCart = await clienteAxios.get(`/users/${idUser}`,  config)
+    const resProd = await clienteAxios.get(`/cart/${resCart.data.getUser.idCart}`, config)
+    console.log(resProd)
+    console.log(resProd.data.getCart.products)
 
-    const resCart = await fetch(`http://localhost:8080/api/users/${idUser}`);
-    const dataCart = await resCart.json();
-
-    const idCart = dataCart.getUser.idCart;
-    const resProd = await fetch(`http://localhost:8080/api/cart/${idCart}`);
-    const dataProd = await resProd.json();
-    console.log(dataProd)
     const valoresIniciales = {};
-    dataProd?.getCart?.products.forEach((producto) => {
+    resProd.data.getCart.products.forEach((producto) => {
       valoresIniciales[producto._id] = 0;
       setCantidadState(valoresIniciales);
     });
-    setCart(dataProd.getCart.products)
+    setCart(resProd.data.getCart.products)
+   
+    
   };
 
   const handleChange = (ev, idProd) => {
@@ -41,14 +41,9 @@ const ShopingCart = () => {
   };
 
   const handleClickMP = async () => {
-    const res = await fetch("http://localhost:8080/api/pay", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-    });
-    const data = await res.json();
-    location.href = `${data.res.init_point}`;
+     const res = await clienteAxios.post('/pay', {}, config)
+     location.href = `${res.data.res.init_point}`;
+    
   };
 
   useEffect(() => {
