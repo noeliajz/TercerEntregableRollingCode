@@ -7,11 +7,12 @@ const CardsAllProducts = ({array}) => {
   
   const handleClick= async (id) =>{
     try {
-      console.log(id)
     const idUser = JSON.parse(localStorage.getItem('idUser'))
     
     const resCart = await clienteAxios.get(`/users/${idUser}`,  config)
     const resProd = await clienteAxios.post(`/cart/${resCart.data.getUser.idCart}/${id}`, {}, config)
+    
+
     if(resProd.status === 200){
       Swal.fire({
         position: 'center',
